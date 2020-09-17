@@ -13,7 +13,7 @@ session_start();
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // vérification utilisateur authentifié
 
-if ('/TAPproject/index.php/login.php' == $uri) {
+if ('/TAP/index.php/login.php' == $uri) {
     $error = '';
     $login = '';
     login_action($login, $error);
@@ -23,12 +23,12 @@ if ('/TAPproject/index.php/login.php' == $uri) {
 if( !isset($_SESSION['login']) ) {
     if( !isset($_POST['login']) || !isset($_POST['password']) ) {
         $error='not connected';
-        $uri='/TAPproject/index.php';
+        $uri='/TAP/index.php';
         $login='';
     }
     elseif( !is_user($_POST['login'],$_POST['password']) ){
         $error='bad login/pwd';
-        $uri='/TAPproject/index.php';
+        $uri='/TAP/index.php';
         $login='';
 
     }
@@ -44,7 +44,7 @@ else {
 }
 //routage
 
-if ( '/TAPproject/index.php' == $uri || '/TAPproject/' == $uri) {
+if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
     accueil_action();
     exit;
 }

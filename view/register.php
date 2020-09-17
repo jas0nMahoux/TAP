@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="centrage">
-<form method="POST" action="/TAPproject/index.php/annonces?$_POST['mail']">
+<form method="POST" action="/TAP/index.php/annonces?$_POST['mail']">
     <h1>
         créer votre compte:
     </h1>
@@ -55,7 +55,7 @@
 
     <input type="submit" value="Envoyer"/>
 </form>
-<a href="/TAPproject/"><button>Annuler</button></a>
+<a href="/TAP/"><button>Annuler</button></a>
 </div>
 <?php $content = ob_get_clean(); ?>
 <?php include 'layout.php'; ?>

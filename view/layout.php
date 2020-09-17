@@ -15,7 +15,7 @@
                     <p class="link">
                         <?php
                         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-                        if ($uri == '/TAPproject/index.php/login.php') {
+                        if ($uri == '/TAP/index.php/login.php') {
                             if ($error != '') {
                                 if ($error == 'not connected') {
                                     echo 'Veuillez svp vous authentifier';
@@ -25,7 +25,7 @@
                                 }
                             } elseif ($login != '') {
                                 echo 'Connecté en tant que ' . $login;
-                                echo ' <a href="/TAPproject/index.php/logout">Déconnexion</a>';
+                                echo ' <a href="/TAP/index.php/logout">Déconnexion</a>';
                             }
                         }?>
                     </p>
@@ -42,7 +42,7 @@
     </div>
             <footer>
                 <p>contactez nous en cas de probléme sur l'adrresse adminTAP@gmail.com</p>
-                <a href="/TAPproject/information.php"><?php if ($uri == '/TAPproject/'){
+                <a href="/TAP/information.php"><?php if ($uri == '/TAP/'){
                     echo 'Qui sommes nous ?';
                     }?></a>
             </footer>
