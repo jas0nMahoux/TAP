@@ -31,7 +31,7 @@
                     </p>
                 </div>
                 <div class="header_gauche">
-                    <img src="img/LOGO.png"/>
+                    <img src="/TAP/img/LOGO.png"/>
                 </div>
             </div>
         </nav>
