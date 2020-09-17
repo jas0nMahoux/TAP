@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be10b070-abcd-493d-8d0c-bcf75d1834ac" name="Default Changelist" comment="">
+    <list default="true" id="be10b070-abcd-493d-8d0c-bcf75d1834ac" name="Default Changelist" comment="ajout logo dans login">
+      <change afterPath="$PROJECT_DIR$/tap.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +48,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
@@ -66,8 +68,17 @@
       <workItem from="1600299739584" duration="2000" />
       <workItem from="1600299765947" duration="816000" />
       <workItem from="1600300943665" duration="1612000" />
-      <workItem from="1600302844233" duration="313000" />
+      <workItem from="1600302844233" duration="1783000" />
+      <workItem from="1600336652665" duration="676000" />
     </task>
+    <task id="LOCAL-00001" summary="ajout logo dans login">
+      <created>1600303314645</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600303314645</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,6 +95,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ajout logo dans login" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout logo dans login" />
   </component>
   <component name="WindowStateProjectService">
     <state x="572" y="79" key="#Servers" timestamp="1600300974741">
@@ -114,9 +129,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="555" y="60" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600299703489" />
-    <state x="856" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600302847853">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600337906334">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="856" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1600302847853" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600337906334" />
+    <state x="856" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600336656046">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="856" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1600336656046" />
   </component>
 </project>
