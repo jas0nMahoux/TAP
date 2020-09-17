@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/TAPproject/layout.css"/>
-<link rel="stylesheet" href="/TAPproject/normalize.css"/>
+<link rel="stylesheet" href="/TAP/layout.css"/>
+<link rel="stylesheet" href="/TAP/normalize.css"/>
 
 <?php
 // charge et initialise les bibliothèques globales
