@@ -42,9 +42,7 @@
     </div>
             <footer>
                 <p>contactez nous en cas de probléme sur l'adrresse adminTAP@gmail.com</p>
-                <a href="/TAP/information.php"><?php if ($uri == '/TAP/'){
-                    echo 'Qui sommes nous ?';
-                    }?></a>
+                <a href="/TAP/index.php/information.php">Qui sommes nous ?</a>
             </footer>
 </body>
 </html>

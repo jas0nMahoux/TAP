@@ -12,7 +12,10 @@ session_start();
 // route la requête en interne
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // vérification utilisateur authentifié
-
+if ( '/TAP/index.php/information.php' == $uri || '/TAP/' == $uri) {
+    information_action();
+    exit;
+}
 if ('/TAP/index.php/login.php' == $uri) {
     $error = '';
     $login = '';
@@ -42,12 +45,13 @@ else {
     $login = $_SESSION['login'];
     $error = '';
 }
-//routage
 
+//routage
 if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
     accueil_action();
     exit;
 }
+
 
 else {
     header('Status: 404 Not Found');
