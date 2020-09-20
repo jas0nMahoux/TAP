@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 17 sep. 2020 à 12:16
+-- Généré le : Dim 20 sep. 2020 à 23:40
 -- Version du serveur :  10.4.13-MariaDB
 -- Version de PHP : 7.4.8
 
@@ -65,16 +65,18 @@ INSERT INTO `commande` (`id_commande`, `details`, `adresse_livraison`, `num_clie
 CREATE TABLE `personnel` (
   `id_perso` int(11) NOT NULL,
   `nom` varchar(30) NOT NULL,
-  `prenom` varchar(30) NOT NULL
+  `prenom` varchar(30) NOT NULL,
+  `login` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `personnel`
 --
 
-INSERT INTO `personnel` (`id_perso`, `nom`, `prenom`) VALUES
-(1, 'MAHOUX', 'Jason'),
-(2, 'JANISEL', 'Emerick');
+INSERT INTO `personnel` (`id_perso`, `nom`, `prenom`, `login`, `password`) VALUES
+(1, 'MAHOUX', 'Jason', '', ''),
+(2, 'JANISEL', 'Emerick', '', '');
 
 -- --------------------------------------------------------
 
