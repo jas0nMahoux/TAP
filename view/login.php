@@ -9,7 +9,9 @@
         <input type="password" name="password" id="password" maxlength="12" required />
         <input type="submit" value="Envoyer">
     </form>
-    <a href="/TAP/index.php/register.php" class="acount"></a>
+    <form action="/TAP/index.php">
+        <input type="submit" value="Annuler" />
+    </form>
 </div>
 <?php $content = ob_get_clean(); ?>
 <?php include 'layout.php'; ?>
