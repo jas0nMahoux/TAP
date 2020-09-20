@@ -25,14 +25,8 @@
     <br />
     <br />
 
-    <label for="pays">Pays</label>
-    <select name="pays" id="pays">
-        <option>Nouvelle-Calédonie</option>
-        <option>Tahiti</option>
-        <option>Australie</option>
-        <option>Vanuatu</option>
-        <option>Japon</option>
-    </select>
+    <label for="Tél">Téléphone</label>
+    <input type="text" name="tél" id="tél" placeholder="defaut" />
 
     <br />
 
