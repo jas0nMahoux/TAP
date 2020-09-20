@@ -9,3 +9,8 @@ function login_action($login,$error)
     $error='';
     require 'view/login.php';
 }
+
+function information_action()
+{
+    require 'view/information.php';
+}
