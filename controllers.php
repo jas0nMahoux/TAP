@@ -14,3 +14,4 @@ function information_action()
 {
     require 'view/information.php';
 }
+?>
