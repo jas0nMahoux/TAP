@@ -15,7 +15,7 @@
                     <p class="link">
                         <?php
                         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-                        if ($uri == '/TAP/index.php/login.php') {
+                        if ($uri == '/TAP/index.php/users') {
                             if ($error != '') {
                                 if ($error == 'not connected') {
                                     echo 'Veuillez svp vous authentifier';

@@ -1,6 +1,6 @@
 <?php
 
-function accueil_action(){
+function accueil_action($login,$error){
     require 'view/accueil.php';
 }
 function login_action($login,$error)
@@ -13,4 +13,7 @@ function login_action($login,$error)
 function information_action()
 {
     require 'view/information.php';
+}
+function users_action($login,$error){
+    require 'view/users.php';
 }
