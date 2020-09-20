@@ -16,7 +16,7 @@ if ( '/TAP/index.php/information.php' == $uri || '/TAP/' == $uri) {
     information_action();
     exit;
 }
-if ('/TAP/index.php/login.php' == $uri) {
+elseif ('/TAP/index.php/login.php' == $uri) {
     $error = '';
     $login = '';
     login_action($login, $error);

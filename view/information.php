@@ -10,7 +10,7 @@
     <div class="header_droite">
         <p class="link2"><a href="/TAP/index.php/login.php">login</a></p>
     </div>
-    <div>
+    <div class="log">
         <h1> Qui sommes nous ?</h1>
         <p> Nous sommes des étudiants en deuxième année de licence informatique. Nous avons créer ce site web pour vous aider
         dans la vie active. De plus nous sommes à votre disposition pour tout contact (voir si dessous).</p>
