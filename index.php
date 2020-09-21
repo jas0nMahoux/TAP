@@ -44,7 +44,6 @@ else {
     $login = $_SESSION['login'];
     $error = '';
 }
-echo $uri;
 //routage
 
 if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
