@@ -1,7 +1,7 @@
 <?php
 function open_database_connection()
 {
-    $link = mysqli_connect('localhost', 'root', '', 'compte');
+    $link = mysqli_connect('localhost', 'root', '', 'tap');
 return $link;
 }
 function close_database_connection($link)
@@ -12,7 +12,7 @@ function is_user( $login, $password )
 {
 $isuser = False ;
 $link = open_database_connection();
-$query= 'SELECT login FROM Users WHERE login="'.$login.'" and password="'.$password.'"';
+$query= 'SELECT login FROM personnel WHERE login="'.$login.'" and password="'.$password.'"';
 $result = mysqli_query($link, $query );
 if( mysqli_num_rows( $result) )
 $isuser = True;

@@ -22,7 +22,6 @@ elseif ('/TAP/index.php/login.php' == $uri) {
     login_action($login, $error);
     exit;
 }
-
 if( !isset($_SESSION['login']) ) {
     if( !isset($_POST['login']) || !isset($_POST['password']) ) {
         $error='not connected';
@@ -45,20 +44,29 @@ else {
     $login = $_SESSION['login'];
     $error = '';
 }
-
+echo $uri;
 //routage
+
 if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
-    accueil_action();
+    accueil_action($login,$error);
     exit;
 }
-
-
+elseif ( '/TAP/index.php/users' == $uri ){
+    users_action($login,$error);
+}
+elseif('/TAP/index.php/logout' == $uri ) {
+// fermeture de la session
+    session_destroy();
+// affichage de la page de connexion
+    login_action('','');
+}
 else {
     header('Status: 404 Not Found');
     echo '<html><body><h1>My Page NotFound</h1></body></html>';
 }
 
 ?>
+
 
 
 
