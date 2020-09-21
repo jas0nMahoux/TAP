@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 </head>
 <body>
-    <div>
+    <div class="log">
     <form method="post" action="/TAP/index.php/menu_user.php">
         <h1> Ajout commande </h1>
         <label for="titre"> Titre: </label>
