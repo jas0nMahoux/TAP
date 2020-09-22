@@ -12,16 +12,16 @@
 
         <h1>Ajouter un véhicule:</h1>
 
-        <label for="marque"> Marque / Model </label> :
-        <input type="text" name="marque" id="marque" />
-        <br />
-
         <label for="immatriculation"> Immatriculation </label> :
         <input type="text" name="immatriculation" id="immatriculation" />
         <br />
-
+        <label for="modele"> Marque / Model </label> :
+        <input type="text" name="modele" id="modele" />
+        <br />
         <label for="age"> Age </label> :
         <input type="text" name="age" id="age" />
+        <br />
+        <input type="submit" value="Envoyer">
         <br />
 
     </form>
