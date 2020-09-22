@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : Dim 20 sep. 2020 à 23:40
+-- Généré le : mar. 22 sep. 2020 à 23:03
 -- Version du serveur :  10.4.13-MariaDB
 -- Version de PHP : 7.4.8
 
@@ -59,6 +59,24 @@ INSERT INTO `commande` (`id_commande`, `details`, `adresse_livraison`, `num_clie
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `is_admin`
+--
+
+CREATE TABLE `is_admin` (
+  `login` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `is_admin`
+--
+
+INSERT INTO `is_admin` (`login`, `password`) VALUES
+('admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `personnel`
 --
 
@@ -67,16 +85,19 @@ CREATE TABLE `personnel` (
   `nom` varchar(30) NOT NULL,
   `prenom` varchar(30) NOT NULL,
   `login` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL
+  `password` varchar(20) NOT NULL,
+  `Ville` varchar(40) NOT NULL,
+  `Tel` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `personnel`
 --
 
-INSERT INTO `personnel` (`id_perso`, `nom`, `prenom`, `login`, `password`) VALUES
-(1, 'MAHOUX', 'Jason', '', ''),
-(2, 'JANISEL', 'Emerick', '', '');
+INSERT INTO `personnel` (`id_perso`, `nom`, `prenom`, `login`, `password`, `Ville`, `Tel`) VALUES
+(1, 'MAHOUX', 'Jason', '', '', '0', '0'),
+(2, 'JANISEL', 'Emerick', '', '', '0', '0'),
+(3, 'Toto', 'Toto', 'bob', 'toto', 'Nouméa', '687696969');
 
 -- --------------------------------------------------------
 
@@ -87,14 +108,14 @@ INSERT INTO `personnel` (`id_perso`, `nom`, `prenom`, `login`, `password`) VALUE
 CREATE TABLE `vehicule` (
   `immatriculation` varchar(30) NOT NULL,
   `modele` varchar(15) NOT NULL,
-  `âge` int(4) NOT NULL
+  `age` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `vehicule`
 --
 
-INSERT INTO `vehicule` (`immatriculation`, `modele`, `âge`) VALUES
+INSERT INTO `vehicule` (`immatriculation`, `modele`, `age`) VALUES
 ('189898NC', 'micra k11', 30),
 ('348512NC', 'mazda 3', 5);
 
@@ -146,7 +167,7 @@ ALTER TABLE `commande`
 -- AUTO_INCREMENT pour la table `personnel`
 --
 ALTER TABLE `personnel`
-  MODIFY `id_perso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_perso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
