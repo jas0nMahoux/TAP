@@ -20,6 +20,27 @@ mysqli_free_result( $result );
 close_database_connection($link);
 return $isuser;
 }
+//function qui dit si un utilisateur est admin ou non
+function is_admin($login, $password)
+{
+    $isadmin=false;
+
+    $link = open_database_connection();
+    $query = 'SELECT login FROM patron WHERE login="' . $login . '" and password="' . $password . '"';
+    //echo $query;
+    $result = mysqli_query($link, $query);
+
+
+    //echo '\n nbligne:'.mysqli_num_rows($result);
+
+    if (mysqli_num_rows($result))
+        $isadmin=true;
+
+    mysqli_free_result($result);
+    close_database_connection($link);
+
+    return $isadmin;
+}
 
 function get_all_posts()
 {
@@ -103,5 +124,11 @@ function supp_annonce($id_supp){
     }
     return $villes;
 }*/
+//fonction création véhicule
+function create_car($immatriculation,$modele,$age){
+    $link = open_database_connection();
+    mysqli_query($link,'INSERT INTO vehicule (immatriculation,modele,age) VALUES ("'.$immatriculation.'","'.$modele.'","'.$age.'")');
+    close_database_connection($link);
+}
 ?>
 

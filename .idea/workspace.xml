@@ -20,12 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="287131ad-3220-41d1-9776-5e8e8263e286" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/view/Ajout_commande.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/Liste_commande.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/Register_vehicule.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Register_vehicule.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Register_vehicule.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +65,7 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
-    <configuration name="localhost" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="Unnamed" start_url="/TAP/index.php">
+    <configuration name="localhost" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="Unnamed" start_url="/TAP/index.php">
       <method v="2" />
     </configuration>
   </component>
@@ -85,6 +84,10 @@
       <workItem from="1600302844233" duration="313000" />
       <workItem from="1600639431406" duration="250000" />
       <workItem from="1600677590125" duration="2365000" />
+      <workItem from="1600733722135" duration="1722000" />
+      <workItem from="1600735489416" duration="1661000" />
+      <workItem from="1600741356524" duration="1834000" />
+      <workItem from="1600743228814" duration="311000" />
     </task>
     <task id="LOCAL-00001" summary="Qui sommes nous ?">
       <created>1600636738844</created>
@@ -124,14 +127,23 @@
     <option name="LAST_COMMIT_MESSAGE" value="Actualisation BDD" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="540" y="175" key="#CLI_Interpreters" timestamp="1600734608543">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="175" key="#CLI_Interpreters/0.0.1920.1040@0.0.1920.1040" timestamp="1600734608543" />
+    <state x="667" y="163" key="#PHP" timestamp="1600734715453">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="163" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1600734715453" />
     <state x="572" y="79" key="#Servers" timestamp="1600300974741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="572" y="79" key="#Servers/0.0.1536.824@0.0.1536.824" timestamp="1600300974741" />
-    <state x="447" y="67" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600636137286">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="300" y="88" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600741429119">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="447" y="67" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1600636137286" />
+    <state x="300" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600741429119" />
     <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1600638254731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

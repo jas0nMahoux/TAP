@@ -17,3 +17,7 @@ function information_action()
 function users_action($login,$error){
     require 'view/users.php';
 }
+//Mvc de la page register vehicule
+function vehicule(){
+    require 'view/Register_vehicule.php';
+}

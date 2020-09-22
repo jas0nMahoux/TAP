@@ -12,6 +12,10 @@ session_start();
 // route la requête en interne
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // vérification utilisateur authentifié
+if(isset($_POST['age'])){
+    create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
+}
+
 if ( '/TAP/index.php/information.php' == $uri || '/TAP/' == $uri) {
     information_action();
     exit;
@@ -45,7 +49,6 @@ else {
     $error = '';
 }
 //routage
-
 if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
     accueil_action($login,$error);
     exit;
@@ -58,6 +61,9 @@ elseif('/TAP/index.php/logout' == $uri ) {
     session_destroy();
 // affichage de la page de connexion
     login_action('','');
+}
+elseif('/TAP/index.php/Register_vehicule.php' == $uri ) {
+    vehicule();
 }
 else {
     header('Status: 404 Not Found');
