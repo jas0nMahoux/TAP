@@ -34,8 +34,10 @@ if( !isset($_SESSION['login']) ) {
         $login='';
     }
     elseif( is_admin($_POST['login'],$_POST['password']) ) {
-        admin_action($_POST['login'],$_POST['password']);
+        $_SESSION['login'] = $_POST['login'] ;
+        $login = $_SESSION['login'];
         $error='';
+        admin_action($login,$error);
         exit;
 
     }
