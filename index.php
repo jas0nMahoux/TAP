@@ -12,6 +12,10 @@ session_start();
 // route la requête en interne
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // vérification utilisateur authentifié
+if(isset($_POST['age'])){
+    create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
+}
+
 if ( '/TAP/index.php/information.php' == $uri || '/TAP/' == $uri) {
     information_action();
     exit;
@@ -29,6 +33,12 @@ if( !isset($_SESSION['login']) ) {
         $uri='/TAP/index.php';
         $login='';
     }
+    elseif( is_admin($_POST['login'],$_POST['password']) ) {
+        admin_action($_POST['login'],$_POST['password']);
+        $error='';
+        exit;
+
+    }
     elseif( !is_user($_POST['login'],$_POST['password']) ){
         $error='bad login/pwd';
         $uri='/TAP/index.php';
@@ -45,20 +55,34 @@ else {
     $login = $_SESSION['login'];
     $error = '';
 }
-
 //routage
 if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
-    accueil_action();
+    accueil_action($login,$error);
     exit;
 }
-
-
+elseif ( '/TAP/index.php/admin.php' == $uri ){
+    admin_action($login,$error);
+}
+elseif ( '/TAP/index.php/users' == $uri ){
+    users_action($login,$error);
+}
+elseif('/TAP/index.php/logout' == $uri ) {
+// fermeture de la session
+    session_destroy();
+// affichage de la page de connexion
+    login_action('','');
+}
+elseif('/TAP/index.php/Register_vehicule.php' == $uri ) {
+    vehicule();
+}
 else {
     header('Status: 404 Not Found');
     echo '<html><body><h1>My Page NotFound</h1></body></html>';
 }
 
 ?>
+
+
 
 
 
