@@ -20,6 +20,18 @@ mysqli_free_result( $result );
 close_database_connection($link);
 return $isuser;
 }
+function is_admin( $login, $password )
+{
+    $isadmin = False ;
+    $link = open_database_connection();
+    $query= 'SELECT login FROM is_admin WHERE login="'.$login.'" and password="'.$password.'"';
+    $result = mysqli_query($link, $query );
+    if( mysqli_num_rows( $result) )
+        $isadmin = True;
+    mysqli_free_result( $result );
+    close_database_connection($link);
+    return $isadmin;
+}
 
 function get_all_posts()
 {

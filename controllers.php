@@ -14,6 +14,10 @@ function information_action()
 {
     require 'view/information.php';
 }
+function admin_action($login,$error)
+{
+    require 'view/admin.php';
+}
 function users_action($login,$error){
     require 'view/users.php';
 }

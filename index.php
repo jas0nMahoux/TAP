@@ -22,11 +22,18 @@ elseif ('/TAP/index.php/login.php' == $uri) {
     login_action($login, $error);
     exit;
 }
+
 if( !isset($_SESSION['login']) ) {
     if( !isset($_POST['login']) || !isset($_POST['password']) ) {
         $error='not connected';
         $uri='/TAP/index.php';
         $login='';
+    }
+    elseif( is_admin($_POST['login'],$_POST['password']) ) {
+        admin_action($_POST['login'],$_POST['password']);
+        $error='';
+        exit;
+
     }
     elseif( !is_user($_POST['login'],$_POST['password']) ){
         $error='bad login/pwd';
@@ -49,6 +56,9 @@ else {
 if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
     accueil_action($login,$error);
     exit;
+}
+elseif ( '/TAP/index.php/admin.php' == $uri ){
+    admin_action($login,$error);
 }
 elseif ( '/TAP/index.php/users' == $uri ){
     users_action($login,$error);
