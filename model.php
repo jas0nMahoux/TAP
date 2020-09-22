@@ -98,8 +98,11 @@ function supp_annonce($id_supp){
 }
 
 function ajout_commande(){
-    $sql='INSERT INTO commande (id_commande, details, adresse_livraison, num_client)
-        VALUES ("''", "'.$_POST[details]'" , "''" ,"''")';
+    $link = open_database_connection();
+    $query = 'INSERT INTO commande (details, adresse_livraison, num_client) 
+    VALUES ("'.$_POST['détail'].'", "'.$_POST['adresse'].'", "'.$_POST['nb_client'].'")';
+    mysqli_query($link, $query);
+    close_database_connection($link);
 }
 
 /*function cityNC($name)

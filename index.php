@@ -12,6 +12,12 @@ session_start();
 // route la requête en interne
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // vérification utilisateur authentifié
+if ('/TAP/index.php/Ajout_commande.php' == $uri ){
+    ajout_commande_action();
+}
+if (isset($_POST['nb_client'])){
+    commande_action();
+}
 if(isset($_POST['age'])){
     create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
 }

@@ -25,3 +25,9 @@ function users_action($login,$error){
 function vehicule(){
     require 'view/Register_vehicule.php';
 }
+function ajout_commande_action (){
+    require 'view/Ajout_commande.php';
+}
+function commande_action (){
+    ajout_commande();
+}
