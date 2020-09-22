@@ -16,7 +16,7 @@ if(isset($_POST['age'])){
     create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
 }
 
-if ( '/TAP/index.php/information.php' == $uri || '/TAP/' == $uri) {
+if ( '/TAP/index.php/information.php' == $uri ) {
     information_action();
     exit;
 }
@@ -64,6 +64,12 @@ if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
 }
 elseif ( '/TAP/index.php/admin.php' == $uri ){
     admin_action($login,$error);
+}
+elseif ( '/TAP/index.php/Liste_commande.php' == $uri ){
+    liste_commande_action($login,$error);
+}
+elseif ( '/TAP/index.php/Ajout_commande.php' == $uri ){
+    ajout_commande_action($login,$error);
 }
 elseif ( '/TAP/index.php/users' == $uri ){
     users_action($login,$error);
