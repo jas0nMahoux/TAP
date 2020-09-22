@@ -4,10 +4,12 @@ function open_database_connection()
     $link = mysqli_connect('localhost', 'root', '', 'compte');
 return $link;
 }
+
 function close_database_connection($link)
 {
 mysqli_close($link);
 }
+
 function is_user( $login, $password )
 {
 $isuser = False ;
@@ -81,6 +83,11 @@ function supp_annonce($id_supp){
     $query = 'delete from Post where id="'.$id_supp.'"';
     mysqli_query($link, $query);
     close_database_connection($link);
+}
+
+function ajout_commande(){
+    $sql='INSERT INTO commande (id_commande, details, adresse_livraison, num_client)
+        VALUES ("''", "'.$_POST[details]'" , "''" ,"''")';
 }
 
 /*function cityNC($name)
