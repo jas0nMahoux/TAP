@@ -38,7 +38,7 @@ function is_admin( $login, $password )
 function get_all_posts()
 {
     $link = open_database_connection();
-    $resultall = mysqli_query($link,'SELECT id, title FROM Post');
+    $resultall = mysqli_query($link,'SELECT id_commande, details FROM commande');
     $posts = array();
     while ($row = mysqli_fetch_assoc($resultall)) {
         $posts[] = $row;
@@ -101,6 +101,13 @@ function ajout_commande(){
     $link = open_database_connection();
     $query = 'INSERT INTO commande (details, adresse_livraison, num_client) 
     VALUES ("'.$_POST['détail'].'", "'.$_POST['adresse'].'", "'.$_POST['nb_client'].'")';
+    mysqli_query($link, $query);
+    close_database_connection($link);
+}
+
+function supp_commande(){
+    $link = open_database_connection();
+    $query = 'DELETE FROM commande where id_commande="'.$_POST['supp'].'";
     mysqli_query($link, $query);
     close_database_connection($link);
 }

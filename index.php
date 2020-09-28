@@ -15,8 +15,22 @@ $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 if ('/TAP/index.php/Ajout_commande.php' == $uri ){
     ajout_commande_action();
 }
+if ('/TAP/index.php/Liste_commande.php' == $uri ){
+    liste_commande ();
+}
 if (isset($_POST['nb_client'])){
     commande_action();
+}
+if ('/TAP/index.php/detail_commande.php' == $uri ){
+    $id = '';
+    $login = '';
+    $error = '';
+    detail_commande($id,$login,$error);
+}
+//bouton supprimer commande
+if (isset($_POST['supp'])) {
+    $id = $_POST['supp'];
+    echo $id;
 }
 if(isset($_POST['age'])){
     create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
@@ -71,7 +85,7 @@ if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
 elseif ( '/TAP/index.php/admin.php' == $uri ){
     admin_action($login,$error);
 }
-elseif ( '/TAP/index.php/users' == $uri ){
+elseif ( '/TAP/index.php/users.php' == $uri ){
     users_action($login,$error);
 }
 elseif('/TAP/index.php/logout' == $uri ) {
