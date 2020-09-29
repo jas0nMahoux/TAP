@@ -3,9 +3,9 @@
     <h1>Tableau de bord</h1>
     <div>
         <form method="post" action="/TAP/index.php/Ajout_commande.php">
-        <h2>Commande</h2>
-        <button type="button" href="/TAP/index.php/users/Ajout_commande.php"> Ajouter une commande </button>
-        <button type="button" href="/TAP/index.php/Liste_commande.php"> Afficher toutes les commandes </button>
+            <h2>Commande</h2>
+            <button type="button" href="/TAP/index.php/users/Ajout_commande.php"> Ajouter une commande </button>
+            <button type="button" href="/TAP/index.php/Liste_commande.php"> Afficher toutes les commandes </button>
         </form>
     </div>
     <div>Map Google</div>
@@ -13,7 +13,7 @@
         <h2>Véhicule</h2>
     </div>
     <div>
-        Information véhivule
+        Information véhicule
         <button type="button"> Fermer </button>
     </div>
     <div>

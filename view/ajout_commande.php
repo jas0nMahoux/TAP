@@ -7,12 +7,9 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 </head>
 <body>
-<div class="centrage">
+<div class="log">
     <form method="POST" action="/TAP/index.php/Ajout_commande.php">
         <h1>Ajouter une commande : </h1>
-        <label for="nb_commande"> Numéro de commande </label> :
-        <input type="text" name="nb_commande" id="nb_commande" />
-        <br />
 
         <label for="détail"> Détail de la commande </label> :
         <input type="text" name="détail" id="détail" />
@@ -25,8 +22,9 @@
         <label for="nb_client"> Numéro du client </label> :
         <input type="text" name="nb_client" id="nb_client" />
         <br />
-
+        <button type="button"> Envoyer</button>
     </form>
+    <a href="/TAP/index.php/users.php"> Retour </a>
 </div>
 </body>
 </html>

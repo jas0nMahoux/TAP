@@ -33,12 +33,12 @@ function commande_action (){
 }
 function liste_commande (){
     $posts = get_all_posts();
+    supp_commande();
     require 'view/Liste_commande.php';
 }
 //affiche le détail d'une commande sélectionnée
 function detail_commande ($id,$login,$error)
 {
-    $posts = get_all_posts();
     $post = get_post($id);
     require 'view/detail_commande.php';
 }
