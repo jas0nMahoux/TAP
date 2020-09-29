@@ -23,7 +23,12 @@ function admin_action($login,$error)
     if(isset($_POST['Mail'])){
         compte_action();
     }
+    if(isset($_GET['id_supp2'])){
+        echo $_GET['id_supp2'];
+        supp_personnel($_GET['id_supp2']);
+    }
     $posts = get_all_vehicule();
+    $posts2 = get_all_personnel();
     require 'view/admin.php';
 }
 function liste_commande_action($login,$error)

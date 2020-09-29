@@ -53,6 +53,25 @@ function supp_vehicule($id_supp){
     close_database_connection($link);
 }
 
+function supp_personnel($id_supp2){
+    $link = open_database_connection();
+    $query = 'delete from personnel where id_perso="'.$id_supp2.'"';
+    mysqli_query($link, $query);
+    close_database_connection($link);
+}
+
+function get_all_personnel()
+{
+    $link = open_database_connection();
+    $resultall = mysqli_query($link,'SELECT nom, prenom,id_perso FROM personnel');
+    $posts2 = array();
+    while ($row = mysqli_fetch_assoc($resultall)) {
+        $posts2[] = $row;
+    }
+    mysqli_free_result( $resultall);
+    close_database_connection($link);
+    return $posts2;
+}
 function get_post( $id )
 {
     $link = open_database_connection();

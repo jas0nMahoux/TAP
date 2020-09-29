@@ -13,6 +13,14 @@
 </div>
 <div class="log">
     <h1> Liste d'employé</h1>
+    <ul>
+        <?php foreach( $posts2 as $post2 ): ?>
+            <li>
+                <?php echo $post2['nom']; echo $post2['prenom'] ?>
+                <form method="post" action="/TAP/index.php/admin.php?id_supp2=<?php echo $post2['id_perso'];?>"><input type="submit" value="supprimer"></form>
+            </li>
+        <?php endforeach ?>
+    </ul>
     <a href="/TAP/index.php/register"><button>Ajouter un employé</button></a>
 </div>
 <?php $content = ob_get_clean(); ?>
