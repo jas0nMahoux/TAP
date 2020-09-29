@@ -59,8 +59,8 @@ function get_post( $id )
 function create_account()
 {
     $link = open_database_connection();
-    $query = 'INSERT INTO personnel ( nom, prenom, login, password, Ville, Tel) 
-        VALUES ("'.$_POST['nom'].'", "'.$_POST['prenom'].'", "'.$_POST['login'].'", "'.$_POST['password'].'","'.$_POST['Ville'].'","'.$_POST['Tel'].'")';
+    $query = 'INSERT INTO personnel ( nom, prenom, login, password, Ville, Tel, Mail) 
+        VALUES ("'.$_POST['nom'].'", "'.$_POST['prenom'].'", "'.$_POST['login'].'", "'.$_POST['password'].'","'.$_POST['Ville'].'","'.$_POST['Tel'].'","'.$_POST['Mail'].'")';
     mysqli_query($link, $query);
     close_database_connection($link);
 
@@ -102,10 +102,10 @@ function create_car($immatriculation,$modele,$age){
 }
 
 
-/*function cityNC($name)
+function cityNC($name)
 {
     $url = 'https://data.gouv.nc/api/records/1.0/search/';
-    $request_url = $url .'?dataset=offres-demploi&q='. urlencode($name).'&rows=50';
+    $request_url = $url .'?dataset=communes-nc&q='. urlencode($name).'&rows=50';
 // initialisation d'une session
     $curl = curl_init($request_url);
 // spécification des paramètres de connexion
@@ -121,7 +121,7 @@ function create_car($immatriculation,$modele,$age){
         $villes[$infoville->fields->nom_minus]=$infoville->fields->code_post;
     }
     return $villes;
-}*/
+}
 ?>
 
 

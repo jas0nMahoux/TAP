@@ -57,6 +57,11 @@ else {
     $login = $_SESSION['login'];
     $error = '';
 }
+
+
+if(isset($_POST['Mail'])) {
+    compte_action();
+}
 //routage
 if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
     accueil_action($login,$error);
@@ -66,13 +71,9 @@ elseif ( '/TAP/index.php/admin.php' == $uri ){
     admin_action($login,$error);
 }
 elseif ('/TAP/index.php/register' == $uri ){
-    register_action();
-    exit;
+    register_action($login,$error);
 }
-elseif(isset($_POST['mail'])) {
-    compte_action();
-    exit;
-}
+
 elseif ( '/TAP/index.php/Liste_commande.php' == $uri ){
     liste_commande_action($login,$error);
 }

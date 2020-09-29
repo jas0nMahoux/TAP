@@ -12,8 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="287131ad-3220-41d1-9776-5e8e8263e286" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/register.php" afterDir="false" />
     </list>

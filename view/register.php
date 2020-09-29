@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="log">
-    <form method="POST" action="/TAP/index.php/register">
+    <form method="POST" action="/TAP/index.php/admin.php">
         <h1>
             Créer votre compte:
         </h1>
@@ -20,8 +20,8 @@
         <input type="text" name="prenom" id="prenom" />
         <br />
 
-        <label for="mail"> Mail </label> :
-        <input type="text" name="mail" id="mail" placeholder="defaut" />
+        <label for="Mail"> Mail </label> :
+        <input type="text" name="Mail" id="Mail" placeholder="defaut" />
         <br />
 
         <label for="Ville" id="Ville"> Ville </label> :
@@ -46,7 +46,7 @@
 
         <input type="submit" value="Envoyer"/>
     </form>
-    <a href="/TAP/index.php/admin"><button>Annuler</button></a>
+    <a href="/TAP/index.php/admin.php"><button>Annuler</button></a>
 </div>
 <?php $content = ob_get_clean(); ?>
 <?php include 'layout.php'; ?>
