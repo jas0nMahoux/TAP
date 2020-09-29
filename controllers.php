@@ -20,6 +20,9 @@ function admin_action($login,$error)
         echo $_GET['id_supp'];
         supp_vehicule($_GET['id_supp']);
     }
+    if(isset($_POST['Mail'])){
+        compte_action();
+    }
     $posts = get_all_vehicule();
     require 'view/admin.php';
 }

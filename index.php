@@ -66,12 +66,15 @@ else {
     $login = $_SESSION['login'];
     $error = '';
 }
+
 //routage
 if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
     accueil_action($login,$error);
     exit;
 }
-
+elseif (('/TAP/index.php/register' == $uri)){
+    register_action($login,$error);
+}
 elseif ( '/TAP/index.php/Liste_commande.php' == $uri ){
     liste_commande_action($login,$error);
 }
