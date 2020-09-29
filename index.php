@@ -65,6 +65,16 @@ if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
 elseif ( '/TAP/index.php/admin.php' == $uri ){
     admin_action($login,$error);
 }
+elseif ('/TAP/index.php/register' == $uri ){
+    $login = ' ';
+    $error = ' ';
+    register_action();
+    exit;
+}
+elseif(isset($_POST['mail'])) {
+    compte_action();
+    exit;
+}
 elseif ( '/TAP/index.php/Liste_commande.php' == $uri ){
     liste_commande_action($login,$error);
 }

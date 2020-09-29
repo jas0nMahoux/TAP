@@ -7,55 +7,46 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 </head>
 <body>
-<div class="centrage">
-<form method="POST" action="/TAP/index.php/annonces?$_POST['mail']">
-    <h1>
-        créer votre compte:
-    </h1>
-    <label for="nom"> Nom </label> :
-    <input type="text" name="nom" id="nom" />
-    <br />
+<div class="log">
+    <form method="POST" action="/TAP/index.php/admin">
+        <h1>
+            Créer votre compte:
+        </h1>
+        <label for="nom"> Nom </label> :
+        <input type="text" name="nom" id="nom" />
+        <br />
 
-    <label for="prenom"> Prénom </label> :
-    <input type="text" name="prenom" id="prenom" />
-    <br />
+        <label for="prenom"> Prénom </label> :
+        <input type="text" name="prenom" id="prenom" />
+        <br />
 
-    <label for="mail"> Mail </label> :
-    <input type="text" name="mail" id="mail" placeholder="defaut" />
-    <br />
-    <br />
+        <label for="mail"> Mail </label> :
+        <input type="text" name="mail" id="mail" placeholder="defaut" />
+        <br />
 
-    <label for="pays">Pays</label>
-    <select name="pays" id="pays">
-        <option>Nouvelle-Calédonie</option>
-        <option>Tahiti</option>
-        <option>Australie</option>
-        <option>Vanuatu</option>
-        <option>Japon</option>
-    </select>
+        <label for="Ville" id="Ville"> Ville </label> :
+        <select name="Ville" id="Ville" value="">
+            <?php $villesNC = cityNC('');
+            echo '<ul>';
+            foreach( $villesNC as $nom => $cp ){
+                echo '<option>'.$nom.'</li>';
+            }
+            echo '</ul>';?></option>
+        </select>
+        <label for="Tel" id="Tel"> Tel </label> :
+        <input type="text" name="Tel" id="Tel" />
+        <br />
+        <br />
 
-    <br />
+        <label for="login"> Votre identifiant </label> :
+        <input type="text" name="login" id="login" placeholder="defaut" />
+        <br />
+        <label for="password"> Votre mot de passe :</label>
+        <input type="password" name="password" id="password" />
 
-    <label for="villes">Villes</label>
-    <select name="ville" id="ville">
-        <option>Nouméa</option>
-        <option>Koumac</option>
-        <option>Koné</option>
-        <option>Pouembout</option>
-        <option>Tokyo</option>
-    </select>
-    <br />
-    <br />
-
-    <label for="login"> Votre identifiant </label> :
-    <input type="text" name="login" id="login" placeholder="defaut" />
-    <br />
-    <label for="password"> Votre mot de passe :</label>
-    <input type="password" name="password" id="password" />
-
-    <input type="submit" value="Envoyer"/>
-</form>
-<a href="/TAP/"><button>Annuler</button></a>
+        <input type="submit" value="Envoyer"/>
+    </form>
+    <a href="/TAP/index.php/admin"><button>Annuler</button></a>
 </div>
 <?php $content = ob_get_clean(); ?>
 <?php include 'layout.php'; ?>

@@ -58,11 +58,11 @@ function get_post( $id )
 
 function create_account()
 {
-        $link = open_database_connection();
-        $query = 'INSERT INTO users (login, password, nom, prenom, mail, pays, ville)
-        VALUES ("'.$_POST['login'].'", "'.$_POST['password'].'", "'.$_POST['nom'].'", "'.$_POST['prenom'].'", "'.$_POST['mail'].'", "'.$_POST['pays'].'", "'.$_POST['ville'].'")';
-        mysqli_query($link, $query);
-        close_database_connection($link);
+    $link = open_database_connection();
+    $query = 'INSERT INTO personnel ( nom, prenom, login, password, Ville, Tel) 
+        VALUES ("'.$_POST['nom'].'", "'.$_POST['prenom'].'", "'.$_POST['login'].'", "'.$_POST['password'].'","'.$_POST['Ville'].'","'.$_POST['Tel'].'")';
+    mysqli_query($link, $query);
+    close_database_connection($link);
 
 }
 
