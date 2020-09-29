@@ -4,8 +4,12 @@
     <div>
         <form method="post" action="/TAP/index.php/Ajout_commande.php">
         <h2>Commande</h2>
-        <button type="button" href="/TAP/index.php/users/Ajout_commande.php"> Ajouter une commande </button>
-        <button type="button" href="/TAP/index.php/Liste_commande.php"> Afficher toutes les commandes </button>
+            <input type="submit" value="Ajouter une commande">
+        </form>
+    </div>
+    <div>
+        <form method="post" action="/TAP/index.php/Liste_commande.php">
+            <input type="submit" value="Liste des commande">
         </form>
     </div>
     <div>Map Google</div>
