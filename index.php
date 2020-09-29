@@ -12,9 +12,6 @@ session_start();
 // route la requête en interne
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // vérification utilisateur authentifié
-if(isset($id_supp)){
-    supp_vehicule();
-}
 
 if(isset($_POST['age'])){
     create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
@@ -28,6 +25,13 @@ elseif ('/TAP/index.php/login.php' == $uri) {
     $error = '';
     $login = '';
     login_action($login, $error);
+    exit;
+}
+
+elseif ('/TAP/index.php/admin.php' == $uri) {
+    $error = '';
+    $login = '';
+    admin_action($login,$error);
     exit;
 }
 

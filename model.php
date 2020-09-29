@@ -46,9 +46,9 @@ function get_all_vehicule()
     return $posts;
 }
 
-function supp_vehicule(){
+function supp_vehicule($id_supp){
     $link = open_database_connection();
-    $query = 'delete from Post where immatriculation="'.$id_supp.'"';
+    $query = 'delete from vehicule where immatriculation="'.$id_supp.'"';
     mysqli_query($link, $query);
     close_database_connection($link);
 }

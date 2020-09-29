@@ -6,7 +6,7 @@
         <?php foreach( $posts as $post ): ?>
             <li>
                     <?php echo $post['immatriculation']; echo '-->'; echo $post['modele'] ?>
-                <a href="/TAP/index.php/admin.php?$id_supp=$post['immatriculation']"><button>supprimer</button></a>
+                <form method="post" action="/TAP/index.php/admin.php?id_supp=<?php echo $post['immatriculation'];?>"><input type="submit" value="supprimer"></form>
             </li>
         <?php endforeach ?>
     </ul>

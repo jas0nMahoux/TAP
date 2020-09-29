@@ -16,6 +16,10 @@ function information_action()
 }
 function admin_action($login,$error)
 {
+    if(isset($_GET['id_supp'])){
+        echo $_GET['id_supp'];
+        supp_vehicule($_GET['id_supp']);
+    }
     $posts = get_all_vehicule();
     require 'view/admin.php';
 }
