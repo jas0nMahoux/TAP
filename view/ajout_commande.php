@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="log">
-    <form method="POST" action="/TAP/index.php/Ajout_commande.php">
+    <form method="POST" action="/TAP/index.php/Ajout_commande">
         <h1>Ajouter une commande : </h1>
 
         <label for="détail"> Détail de la commande </label> :
@@ -24,7 +24,7 @@
         <br />
         <button type="button"> Envoyer</button>
     </form>
-    <a href="/TAP/index.php/users.php"> Retour </a>
+    <a href="/TAP/index.php/users"> Retour </a>
 </div>
 </body>
 </html>

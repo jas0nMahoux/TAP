@@ -12,16 +12,16 @@ session_start();
 // route la requête en interne
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // vérification utilisateur authentifié
-if ('/TAP/index.php/Ajout_commande.php' == $uri ){
+if ('/TAP/index.php/Ajout_commande' == $uri ){
     ajout_commande_action();
 }
-if ('/TAP/index.php/Liste_commande.php' == $uri ){
+if ('/TAP/index.php/Liste_commande' == $uri ){
     liste_commande ();
 }
 if (isset($_POST['nb_client'])){
     commande_action();
 }
-if ('/TAP/index.php/detail_commande.php' == $uri ){
+if ('/TAP/index.php/detail_commande' == $uri ){
     $id = '';
     $login = '';
     $error = '';
@@ -36,11 +36,11 @@ if(isset($_POST['age'])){
     create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
 }
 
-if ( '/TAP/index.php/information.php' == $uri || '/TAP/' == $uri) {
+if ( '/TAP/index.php/information' == $uri || '/TAP/' == $uri) {
     information_action();
     exit;
 }
-elseif ('/TAP/index.php/login.php' == $uri) {
+elseif ('/TAP/index.php/login' == $uri) {
     $error = '';
     $login = '';
     login_action($login, $error);
@@ -82,10 +82,10 @@ if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
     accueil_action($login,$error);
     exit;
 }
-elseif ( '/TAP/index.php/admin.php' == $uri ){
+elseif ( '/TAP/index.php/admin' == $uri ){
     admin_action($login,$error);
 }
-elseif ( '/TAP/index.php/users.php' == $uri ){
+elseif ( '/TAP/index.php/users' == $uri ){
     users_action($login,$error);
 }
 elseif('/TAP/index.php/logout' == $uri ) {
@@ -94,7 +94,7 @@ elseif('/TAP/index.php/logout' == $uri ) {
 // affichage de la page de connexion
     login_action('','');
 }
-elseif('/TAP/index.php/Register_vehicule.php' == $uri ) {
+elseif('/TAP/index.php/Register_vehicule' == $uri ) {
     vehicule();
 }
 else {

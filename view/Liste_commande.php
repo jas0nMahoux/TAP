@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="log">
-    <form method="POST" action="/TAP/index.php/Liste_commande.php">
+    <form method="POST" action="/TAP/index.php/Liste_commande">
         <h1> Liste des commandes </h1>
         <ul>
             <?php foreach( $posts as $post ) : ?>
@@ -21,7 +21,7 @@
             <?php endforeach ?>
         </ul>
     </form>
-    <button href="/TAP/index.php/users.php">Retour</button>
+    <button href="/TAP/index.php/users">Retour</button>
 </div>
 </body>
 </html>

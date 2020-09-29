@@ -1,7 +1,7 @@
 <?php $title= 'Exemple creation compte PHP: Connexion'; ?>
 <?php ob_start(); ?>
     <div class="header_droite">
-        <p class="link2"><a href="/TAP/index.php/login.php">login</a></p>
+        <p class="link2"><a href="/TAP/index.php/login">login</a></p>
     </div>
     <div class="log">
         <p>quelques informations</p>
