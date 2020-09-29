@@ -36,7 +36,7 @@ function vehicule(){
 function compte_action(){
     create_account();
 }
-function register_action()
+function register_action($login,$error)
 {
     require 'view/register.php';
 }

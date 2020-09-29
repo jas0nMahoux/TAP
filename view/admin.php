@@ -3,7 +3,6 @@
 <p>C'est le menu ADMIN</p>
 <div>
     <h1> Liste employé</h1>
-    <a href="/TAP/index.php/register.php">Ajouter Employé</a>
-</div>
+    <a href="/TAP/index.php/register">sing in</a></div>
 <?php $content = ob_get_clean(); ?>
 <?php include 'layout.php'; ?>

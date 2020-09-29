@@ -66,8 +66,6 @@ elseif ( '/TAP/index.php/admin.php' == $uri ){
     admin_action($login,$error);
 }
 elseif ('/TAP/index.php/register' == $uri ){
-    $login = ' ';
-    $error = ' ';
     register_action();
     exit;
 }

@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="log">
-    <form method="POST" action="/TAP/index.php/admin">
+    <form method="POST" action="/TAP/index.php/register">
         <h1>
             Créer votre compte:
         </h1>
@@ -25,7 +25,7 @@
         <br />
 
         <label for="Ville" id="Ville"> Ville </label> :
-        <select name="Ville" id="Ville" value="">
+        <select name="Ville" id="Ville">
             <?php $villesNC = cityNC('');
             echo '<ul>';
             foreach( $villesNC as $nom => $cp ){
