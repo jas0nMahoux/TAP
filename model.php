@@ -96,6 +96,13 @@ function supp_annonce($id_supp){
     mysqli_query($link, $query);
     close_database_connection($link);
 }
+//fonction création véhicule
+function create_car($immatriculation,$modele,$age){
+    $link = open_database_connection();
+    mysqli_query($link,'INSERT INTO vehicule (immatriculation,modele,age) VALUES ("'.$immatriculation.'","'.$modele.'","'.$age.'")');
+    close_database_connection($link);
+}
+
 
 function ajout_commande(){
     $link = open_database_connection();
@@ -113,4 +120,5 @@ function supp_commande(){
 }
 
 ?>
+
 

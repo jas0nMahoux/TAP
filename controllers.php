@@ -18,6 +18,14 @@ function admin_action($login,$error)
 {
     require 'view/admin.php';
 }
+function liste_commande_action($login,$error)
+{
+    require 'view/Liste_commande.php';
+}
+function ajout_commande_action($login,$error)
+{
+    require 'view/Ajout_commande.php';
+}
 function users_action($login,$error){
     require 'view/users.php';
 }

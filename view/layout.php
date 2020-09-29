@@ -15,7 +15,6 @@
                     <p class="link">
                         <?php
                         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-                        if ($uri == '/TAP/index.php/users') {
                             if ($error != '') {
                                 if ($error == 'not connected') {
                                     echo 'Veuillez svp vous authentifier';
@@ -26,7 +25,7 @@
                             } elseif ($login != '') {
                                 echo 'Connecté en tant que ' . $login;
                                 echo ' <a href="/TAP/index.php/logout">Déconnexion</a>';
-                            }
+
                         }?>
                     </p>
                 </div>
