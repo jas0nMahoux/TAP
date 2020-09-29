@@ -38,3 +38,10 @@ function users_action($login,$error){
 function vehicule(){
     require 'view/Register_vehicule.php';
 }
+function compte_action(){
+    create_account();
+}
+function register_action($login,$error)
+{
+    require 'view/register.php';
+}
