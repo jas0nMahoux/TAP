@@ -12,6 +12,10 @@ session_start();
 // route la requête en interne
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // vérification utilisateur authentifié
+if(isset($id_supp)){
+    supp_vehicule();
+}
+
 if(isset($_POST['age'])){
     create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
 }
@@ -38,6 +42,7 @@ if( !isset($_SESSION['login']) ) {
         $login = $_SESSION['login'];
         $error='';
         admin_action($login,$error);
+
         exit;
 
     }
@@ -62,9 +67,7 @@ if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
     accueil_action($login,$error);
     exit;
 }
-elseif ( '/TAP/index.php/admin.php' == $uri ){
-    admin_action($login,$error);
-}
+
 elseif ( '/TAP/index.php/Liste_commande.php' == $uri ){
     liste_commande_action($login,$error);
 }

@@ -16,6 +16,7 @@ function information_action()
 }
 function admin_action($login,$error)
 {
+    $posts = get_all_vehicule();
     require 'view/admin.php';
 }
 function liste_commande_action($login,$error)

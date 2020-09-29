@@ -33,10 +33,10 @@ function is_admin( $login, $password )
     return $isadmin;
 }
 
-function get_all_posts()
+function get_all_vehicule()
 {
     $link = open_database_connection();
-    $resultall = mysqli_query($link,'SELECT id, title FROM Post');
+    $resultall = mysqli_query($link,'SELECT immatriculation, modele FROM vehicule');
     $posts = array();
     while ($row = mysqli_fetch_assoc($resultall)) {
         $posts[] = $row;
@@ -45,6 +45,14 @@ function get_all_posts()
     close_database_connection($link);
     return $posts;
 }
+
+function supp_vehicule(){
+    $link = open_database_connection();
+    $query = 'delete from Post where immatriculation="'.$id_supp.'"';
+    mysqli_query($link, $query);
+    close_database_connection($link);
+}
+
 function get_post( $id )
 {
     $link = open_database_connection();
