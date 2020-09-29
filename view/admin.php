@@ -16,7 +16,7 @@
     <ul>
         <?php foreach( $posts2 as $post2 ): ?>
             <li>
-                <?php echo $post2['nom']; echo $post2['prenom'] ?>
+                <?php echo $post2['nom']; echo ' '; echo $post2['prenom'] ?>
                 <form method="post" action="/TAP/index.php/admin.php?id_supp2=<?php echo $post2['id_perso'];?>"><input type="submit" value="supprimer"></form>
             </li>
         <?php endforeach ?>
