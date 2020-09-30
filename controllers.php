@@ -21,6 +21,7 @@ function admin_action($login,$error)
         supp_vehicule($_GET['id_supp']);
     }
     if(isset($_POST['Mail'])){
+        echo 'test';
         compte_action();
     }
     if(isset($_GET['id_supp2'])){
@@ -40,13 +41,20 @@ function ajout_commande_action($login,$error)
     require 'view/Ajout_commande.php';
 }
 function users_action($login,$error){
-    require 'view/users.php';
+    if($_SESSION['admin'] == True){
+        $login="admin";
+        admin_action($login,$error);
+    }
+    else {
+        require 'view/users.php';
+    }
 }
 //Mvc de la page register vehicule
 function vehicule(){
     require 'view/Register_vehicule.php';
 }
 function compte_action(){
+    echo 'test2';
     create_account();
 }
 function register_action($login,$error)

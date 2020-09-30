@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="log">
-    <form method="POST" action="/TAP/index.php/admin.php">
+    <form method="POST" action="/TAP/index.php/users">
         <h1>
             Créer votre compte:
         </h1>
@@ -46,7 +46,7 @@
 
         <input type="submit" value="Envoyer"/>
     </form>
-    <a href="/TAP/index.php/admin.php"><button>Annuler</button></a>
+    <a href="/TAP/index.php/users"><button>Annuler</button></a>
 </div>
 <?php $content = ob_get_clean(); ?>
 <?php include 'layout.php'; ?>

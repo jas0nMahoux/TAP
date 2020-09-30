@@ -10,8 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be10b070-abcd-493d-8d0c-bcf75d1834ac" name="Default Changelist" comment="fonctionnalité supprimer vehicule">
+    <list default="true" id="be10b070-abcd-493d-8d0c-bcf75d1834ac" name="Default Changelist" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +95,8 @@
       <workItem from="1601357937463" duration="1649000" />
       <workItem from="1601359918631" duration="817000" />
       <workItem from="1601361819184" duration="80000" />
-      <workItem from="1601506703048" duration="565000" />
+      <workItem from="1601506703048" duration="1798000" />
+      <workItem from="1601508513604" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="ajout logo dans login">
       <created>1600303314645</created>
@@ -121,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601358843548</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test">
+      <created>1601507276771</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601507276771</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +156,8 @@
     <MESSAGE value="correction du probleme daffichage de session dans le menu admin ." />
     <MESSAGE value="implementation admin vehicule" />
     <MESSAGE value="fonctionnalité supprimer vehicule" />
-    <option name="LAST_COMMIT_MESSAGE" value="fonctionnalité supprimer vehicule" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="WindowStateProjectService">
     <state x="807" y="196" key="#CLI_Interpreters" timestamp="1600588832662">
@@ -178,10 +191,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="898" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1600299982693" />
-    <state x="147" y="65" key="MergeDialog" timestamp="1600302859417">
+    <state x="147" y="65" key="MergeDialog" timestamp="1601507307370">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1600302859417" />
+    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1601507307370" />
+    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1601507307392">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1601507307392" />
     <state x="555" y="60" key="SettingsEditor" timestamp="1600299703489">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -191,10 +208,10 @@
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601358847518" />
     <state x="451" y="185" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1600813950843" />
-    <state x="856" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601506744855">
+    <state x="856" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601507285957">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="856" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1601506744855" />
+    <state x="856" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1601507285957" />
     <state x="1070" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1600809605299" />
     <state x="429" y="0" width="1010" height="672" key="dock-window-1" timestamp="1600586165044">
       <screen x="0" y="0" width="1920" height="1040" />

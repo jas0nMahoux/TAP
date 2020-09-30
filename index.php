@@ -43,10 +43,10 @@ if( !isset($_SESSION['login']) ) {
     }
     elseif( is_admin($_POST['login'],$_POST['password']) ) {
         $_SESSION['login'] = $_POST['login'] ;
+        $_SESSION['admin'] = True ;
         $login = $_SESSION['login'];
         $error='';
         admin_action($login,$error);
-
         exit;
 
     }
@@ -58,6 +58,7 @@ if( !isset($_SESSION['login']) ) {
     }
     else {
         $_SESSION['login'] = $_POST['login'] ;
+        $_SESSION['admin'] = False ;
         $login = $_SESSION['login'];
         $error='';
     }
@@ -66,6 +67,8 @@ else {
     $login = $_SESSION['login'];
     $error = '';
 }
+
+
 
 //routage
 if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
