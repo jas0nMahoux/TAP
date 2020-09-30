@@ -53,6 +53,25 @@ function supp_vehicule($id_supp){
     close_database_connection($link);
 }
 
+function supp_personnel($id_supp2){
+    $link = open_database_connection();
+    $query = 'delete from personnel where id_perso="'.$id_supp2.'"';
+    mysqli_query($link, $query);
+    close_database_connection($link);
+}
+
+function get_all_personnel()
+{
+    $link = open_database_connection();
+    $resultall = mysqli_query($link,'SELECT nom, prenom,id_perso FROM personnel');
+    $posts2 = array();
+    while ($row = mysqli_fetch_assoc($resultall)) {
+        $posts2[] = $row;
+    }
+    mysqli_free_result( $resultall);
+    close_database_connection($link);
+    return $posts2;
+}
 function get_post( $id )
 {
     $link = open_database_connection();
@@ -66,11 +85,11 @@ function get_post( $id )
 
 function create_account()
 {
-        $link = open_database_connection();
-        $query = 'INSERT INTO users (login, password, nom, prenom, mail, pays, ville)
-        VALUES ("'.$_POST['login'].'", "'.$_POST['password'].'", "'.$_POST['nom'].'", "'.$_POST['prenom'].'", "'.$_POST['mail'].'", "'.$_POST['pays'].'", "'.$_POST['ville'].'")';
-        mysqli_query($link, $query);
-        close_database_connection($link);
+    $link = open_database_connection();
+    $query = 'INSERT INTO personnel ( nom, prenom, login, password, Ville, Tel, Mail) 
+        VALUES ("'.$_POST['nom'].'", "'.$_POST['prenom'].'", "'.$_POST['login'].'", "'.$_POST['password'].'","'.$_POST['Ville'].'","'.$_POST['Tel'].'","'.$_POST['Mail'].'")';
+    mysqli_query($link, $query);
+    close_database_connection($link);
 
 }
 
@@ -110,10 +129,10 @@ function create_car($immatriculation,$modele,$age){
 }
 
 
-/*function cityNC($name)
+function cityNC($name)
 {
     $url = 'https://data.gouv.nc/api/records/1.0/search/';
-    $request_url = $url .'?dataset=offres-demploi&q='. urlencode($name).'&rows=50';
+    $request_url = $url .'?dataset=communes-nc&q='. urlencode($name).'&rows=50';
 // initialisation d'une session
     $curl = curl_init($request_url);
 // spécification des paramètres de connexion
@@ -129,7 +148,7 @@ function create_car($immatriculation,$modele,$age){
         $villes[$infoville->fields->nom_minus]=$infoville->fields->code_post;
     }
     return $villes;
-}*/
+}
 ?>
 
 

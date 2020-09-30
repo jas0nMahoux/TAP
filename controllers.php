@@ -20,7 +20,15 @@ function admin_action($login,$error)
         echo $_GET['id_supp'];
         supp_vehicule($_GET['id_supp']);
     }
+    if(isset($_POST['Mail'])){
+        compte_action();
+    }
+    if(isset($_GET['id_supp2'])){
+        echo $_GET['id_supp2'];
+        supp_personnel($_GET['id_supp2']);
+    }
     $posts = get_all_vehicule();
+    $posts2 = get_all_personnel();
     require 'view/admin.php';
 }
 function liste_commande_action($login,$error)
@@ -37,4 +45,11 @@ function users_action($login,$error){
 //Mvc de la page register vehicule
 function vehicule(){
     require 'view/Register_vehicule.php';
+}
+function compte_action(){
+    create_account();
+}
+function register_action($login,$error)
+{
+    require 'view/register.php';
 }
