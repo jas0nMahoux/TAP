@@ -35,7 +35,7 @@ function is_admin( $login, $password )
     return $isadmin;
 }
 
-function get_all_posts()
+function get_all_commande()
 {
     $link = open_database_connection();
     $resultall = mysqli_query($link,'SELECT id_commande, details FROM commande');
@@ -104,17 +104,17 @@ function create_car($immatriculation,$modele,$age){
 }
 
 
-function ajout_commande(){
+function ajout_commande($detail, $adresse,$nb_client ){
     $link = open_database_connection();
     $query = 'INSERT INTO commande (details, adresse_livraison, num_client) 
-    VALUES ("'.$_POST['détail'].'", "'.$_POST['adresse'].'", "'.$_POST['nb_client'].'")';
+    VALUES ("'.$detail.'", "'.$adresse.'", "'.$nb_client.'")';
     mysqli_query($link, $query);
     close_database_connection($link);
 }
 
-function supp_commande(){
+function supp_commande($id_supp){
     $link = open_database_connection();
-    $query = 'DELETE FROM commande where id_commande= "'.$_POST['supp'].'"';
+    $query = 'DELETE FROM commande where id_commande= "'.$id_supp.'"';
     mysqli_query($link, $query);
     close_database_connection($link);
 }

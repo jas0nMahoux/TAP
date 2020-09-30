@@ -11,8 +11,8 @@
     <form method="POST" action="/TAP/index.php/Ajout_commande">
         <h1>Ajouter une commande : </h1>
 
-        <label for="détail"> Détail de la commande </label> :
-        <input type="text" name="détail" id="détail" />
+        <label for="detail"> Détail de la commande </label> :
+        <input type="text" name="detail" id="detail" />
         <br />
 
         <label for="adresse"> Adresse de livraison </label> :
@@ -22,7 +22,7 @@
         <label for="nb_client"> Numéro du client </label> :
         <input type="text" name="nb_client" id="nb_client" />
         <br />
-        <button type="button"> Envoyer</button>
+        <input type="submit" value="Envoyer">
     </form>
     <a href="/TAP/index.php/users"> Retour </a>
 </div>

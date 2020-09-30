@@ -2,11 +2,10 @@
 <?php ob_start(); ?>
     <h1>Tableau de bord</h1>
     <div>
-        <form method="post" action="/TAP/index.php/Ajout_commande">
             <h2>Commande</h2>
-            <button type="button" href="/TAP/index.php/Ajout_commande"> Ajouter une commande </button>
-            <button type="button" href="/TAP/index.php/Liste_commande"> Afficher toutes les commandes </button>
-        </form>
+            <a href="/TAP/index.php/Ajout_commande"> Ajouter une commande </a>
+            <br>
+            <a href="/TAP/index.php/Liste_commande"> Afficher toutes les commandes </a>
     </div>
     <div>Map Google</div>
     <div>

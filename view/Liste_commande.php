@@ -1,4 +1,4 @@
-<?php $title= 'Exemple Liste commande'; ?>
+<?php $title= "Exemple Liste commande"; ?>
 <?php ob_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -8,20 +8,22 @@
 </head>
 <body>
 <div class="log">
-    <form method="POST" action="/TAP/index.php/Liste_commande">
-        <h1> Liste des commandes </h1>
+    <h1> Liste des commandes </h1>
+
         <ul>
             <?php foreach( $posts as $post ) : ?>
                 <li>
-                    <a href="detail_commande.php?id=<?php echo $post['id_commande']; ?>">
+                    <a href="detail_commande.php?id_com=<?php echo $post['id_commande']; ?>">
                         <p> Commande <?php echo $post ['id_commande']; ?> </p>
                     </a>
-                    <button type="submit" name="supp">Supprimer</button>
+                    <form method="POST" action="/TAP/index.php/Liste_commande?id_supp=<?php echo $post['id_commande'];?>">
+                    <input type="submit" name="supp" value="Supprimer">
+                    </form>
                 </li>
             <?php endforeach ?>
         </ul>
-    </form>
-    <button href="/TAP/index.php/users">Retour</button>
+
+    <a href="/TAP/index.php/users">Retour</a>
 </div>
 </body>
 </html>

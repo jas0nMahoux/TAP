@@ -12,29 +12,7 @@ session_start();
 // route la requête en interne
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // vérification utilisateur authentifié
-if ('/TAP/index.php/Ajout_commande' == $uri ){
-    ajout_commande_action();
-}
-if ('/TAP/index.php/Liste_commande' == $uri ){
-    liste_commande ();
-}
-if (isset($_POST['nb_client'])){
-    commande_action();
-}
-if ('/TAP/index.php/detail_commande' == $uri ){
-    $id = '';
-    $login = '';
-    $error = '';
-    detail_commande($id,$login,$error);
-}
-//bouton supprimer commande
-if (isset($_POST['supp'])) {
-    $id = $_POST['supp'];
-    echo $id;
-}
-if(isset($_POST['age'])){
-    create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
-}
+
 
 if ( '/TAP/index.php/information' == $uri || '/TAP/' == $uri) {
     information_action();
@@ -97,11 +75,33 @@ elseif('/TAP/index.php/logout' == $uri ) {
 elseif('/TAP/index.php/Register_vehicule' == $uri ) {
     vehicule();
 }
+elseif ('/TAP/index.php/Ajout_commande' == $uri ){
+    ajout_commande_action($login, $error);
+}
+elseif ('/TAP/index.php/Liste_commande' == $uri ){
+    liste_commande ();
+}
+elseif (isset($_POST['nb_client'])){
+    commande_action();
+}
+elseif('/TAP/index.php/detail_commande' == $uri ){
+    detail_commande();
+}
 else {
     header('Status: 404 Not Found');
     echo '<html><body><h1>My Page NotFound</h1></body></html>';
 }
 
+/*
+//bouton supprimer commande
+elseif (isset($_POST['supp'])) {
+    $id = $_POST['supp'];
+    echo $id;
+
+if(isset($_POST['age'])){
+    create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
+}
+*/
 ?>
 
 
