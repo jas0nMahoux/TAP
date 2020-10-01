@@ -51,7 +51,7 @@ function get_post( $id )
 {
     $link = open_database_connection();
     $id = intval($id);
-    $result = mysqli_query($link, 'SELECT * FROM Post WHERE id='.$id );
+    $result = mysqli_query($link, 'SELECT * FROM Post WHERE id="'.$id.'"');
     $post = mysqli_fetch_assoc($result);
     mysqli_free_result( $result);
     close_database_connection($link);
@@ -118,6 +118,7 @@ function supp_commande($id_supp){
     mysqli_query($link, $query);
     close_database_connection($link);
 }
+
 
 ?>
 

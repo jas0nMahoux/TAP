@@ -84,7 +84,7 @@ elseif ('/TAP/index.php/Liste_commande' == $uri ){
 elseif (isset($_POST['nb_client'])){
     commande_action();
 }
-elseif('/TAP/index.php/detail_commande' == $uri ){
+elseif('/TAP/index.php/detail_commande' == $uri) {
     detail_commande();
 }
 else {

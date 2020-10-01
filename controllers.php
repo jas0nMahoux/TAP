@@ -46,8 +46,9 @@ function liste_commande (){
 }
 
 //affiche le détail d'une commande sélectionnée
-function detail_commande ($id,$login,$error)
+function detail_commande($id)
 {
+    $id=$_GET['id_commande'];
     $post = get_post($id);
     require 'view/detail_commande.php';
 }

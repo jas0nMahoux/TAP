@@ -13,7 +13,7 @@
         <ul>
             <?php foreach( $posts as $post ) : ?>
                 <li>
-                    <a href="detail_commande.php?id_com=<?php echo $post['id_commande']; ?>">
+                    <a href="/TAP/index.php/detail_commande?id_commande=<?php echo $post['id_commande']; ?>">
                         <p> Commande <?php echo $post ['id_commande']; ?> </p>
                     </a>
                     <form method="POST" action="/TAP/index.php/Liste_commande?id_supp=<?php echo $post['id_commande'];?>">
