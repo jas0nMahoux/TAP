@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="287131ad-3220-41d1-9776-5e8e8263e286" name="Default Changelist" comment="a">
+    <list default="true" id="287131ad-3220-41d1-9776-5e8e8263e286" name="Default Changelist" comment="ajout vehicule admin">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_14_17__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_14_17__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_14_20__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_14_20__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_15_23__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_15_23__Default_Changelist_.xml" afterDir="false" />
@@ -39,10 +39,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_09_2020_13_29__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_09_2020_13_29__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_09_2020_13_38__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_09_2020_13_38__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Register_vehicule.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Register_vehicule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/users.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +107,7 @@
       <workItem from="1600745216282" duration="841000" />
       <workItem from="1601358030439" duration="1524000" />
       <workItem from="1601516739400" duration="680000" />
+      <workItem from="1601518547761" duration="1796000" />
     </task>
     <task id="LOCAL-00001" summary="Qui sommes nous ?">
       <created>1600636738844</created>
