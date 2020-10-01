@@ -22,6 +22,7 @@
             </li>
         <?php endforeach ?>
     </ul>
+    <a href="/TAP/index.php/register"><button>Ajouter un employé</button></a>
 
 </div>
 <?php $content = ob_get_clean(); ?>
