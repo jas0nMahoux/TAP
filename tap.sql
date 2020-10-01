@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 22 sep. 2020 à 23:03
+-- Généré le : jeu. 01 oct. 2020 à 02:36
 -- Version du serveur :  10.4.13-MariaDB
 -- Version de PHP : 7.4.8
 
@@ -33,8 +33,18 @@ CREATE TABLE `capteur` (
   `moteur` tinyint(1) NOT NULL,
   `ceinture` tinyint(1) NOT NULL,
   `id_commande` int(20) NOT NULL,
-  `immatriculation` varchar(30) NOT NULL
+  `immatriculation` varchar(30) NOT NULL,
+  `vitesse moyenne` int(5) NOT NULL,
+  `consommation moyenne` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `capteur`
+--
+
+INSERT INTO `capteur` (`longitude`, `latitude`, `moteur`, `ceinture`, `id_commande`, `immatriculation`, `vitesse moyenne`, `consommation moyenne`) VALUES
+(0, 0, 1, 1, 1, '336366 NC', 50, 7),
+(0, 0, 0, 0, 2, '183338 NC', 60, 5);
 
 -- --------------------------------------------------------
 
@@ -46,15 +56,17 @@ CREATE TABLE `commande` (
   `id_commande` int(4) NOT NULL,
   `details` varchar(100) NOT NULL,
   `adresse_livraison` varchar(50) NOT NULL,
-  `num_client` int(8) NOT NULL
+  `num_client` int(8) NOT NULL,
+  `En_cours` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `commande`
 --
 
-INSERT INTO `commande` (`id_commande`, `details`, `adresse_livraison`, `num_client`) VALUES
-(1, 'Filtre à air KN', 'NAKUTAKOIN', 910401);
+INSERT INTO `commande` (`id_commande`, `details`, `adresse_livraison`, `num_client`, `En_cours`) VALUES
+(1, 'Filtre à air KN', 'NAKUTAKOIN', 910401, 0),
+(2, 'pizza bolognaise + kebab', '33 rue jean André Felix', 700203, 1);
 
 -- --------------------------------------------------------
 
@@ -87,17 +99,17 @@ CREATE TABLE `personnel` (
   `login` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
   `Ville` varchar(40) NOT NULL,
-  `Tel` varchar(10) NOT NULL
+  `Tel` varchar(10) NOT NULL,
+  `Mail` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `personnel`
 --
 
-INSERT INTO `personnel` (`id_perso`, `nom`, `prenom`, `login`, `password`, `Ville`, `Tel`) VALUES
-(1, 'MAHOUX', 'Jason', '', '', '0', '0'),
-(2, 'JANISEL', 'Emerick', '', '', '0', '0'),
-(3, 'Toto', 'Toto', 'bob', 'toto', 'Nouméa', '687696969');
+INSERT INTO `personnel` (`id_perso`, `nom`, `prenom`, `login`, `password`, `Ville`, `Tel`, `Mail`) VALUES
+(20, 'TD', 'Thomas alias omni', 'TD', 'TD', 'Nouméa', '687696969', ''),
+(28, 'Jason', 'Thomas alias omni', 'admin', 'toto', 'Ouvéa', '687710258', 'unc@uncnc');
 
 -- --------------------------------------------------------
 
@@ -116,8 +128,7 @@ CREATE TABLE `vehicule` (
 --
 
 INSERT INTO `vehicule` (`immatriculation`, `modele`, `age`) VALUES
-('189898NC', 'micra k11', 30),
-('348512NC', 'mazda 3', 5);
+('336366 NC', 'DS3', 10);
 
 --
 -- Index pour les tables déchargées
@@ -155,19 +166,19 @@ ALTER TABLE `vehicule`
 -- AUTO_INCREMENT pour la table `capteur`
 --
 ALTER TABLE `capteur`
-  MODIFY `id_commande` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_commande` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `commande`
 --
 ALTER TABLE `commande`
-  MODIFY `id_commande` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_commande` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `personnel`
 --
 ALTER TABLE `personnel`
-  MODIFY `id_perso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_perso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
