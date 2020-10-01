@@ -12,6 +12,8 @@ function login_action($login,$error)
 
 function information_action()
 {
+    $login='';
+    $error='';
     require 'view/information.php';
 }
 function admin_action($login,$error)
