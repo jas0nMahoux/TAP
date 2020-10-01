@@ -1,0 +1,181 @@
+Index: view/Ajout_commande.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php $title= 'Exemple creation compte PHP: Connexion'; ?>\r\n<?php ob_start(); ?>\r\n<!DOCTYPE html>\r\n<html lang=\"fr\">\r\n<head>\r\n    <title> Ajout commande </title>\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\" />\r\n</head>\r\n<body>\r\n<div class=\"centrage\">\r\n    <form method=\"POST\" action=\"/TAP/index.php/Ajout_commande.php\">\r\n        <h1>Ajouter une commande : </h1>\r\n        <label for=\"nb_commande\"> Numéro de commande </label> :\r\n        <input type=\"text\" name=\"nb_commande\" id=\"nb_commande\" />\r\n        <br />\r\n\r\n        <label for=\"détail\"> Détail de la commande </label> :\r\n        <input type=\"text\" name=\"détail\" id=\"détail\" />\r\n        <br />\r\n\r\n        <label for=\"adresse\"> Adresse de livraison </label> :\r\n        <input type=\"text\" name=\"adresse\" id=\"adresse\" />\r\n        <br />\r\n\r\n        <label for=\"nb_client\"> Numéro du client </label> :\r\n        <input type=\"text\" name=\"nb_client\" id=\"nb_client\" />\r\n        <br />\r\n\r\n    </form>\r\n</div>\r\n</body>\r\n</html>\r\n<?php $content = ob_get_clean(); ?>\r\n<?php include 'layout.php'; ?>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- view/Ajout_commande.php	(revision 882800eff47e6593e7976475decbd1401440c763)
++++ view/Ajout_commande.php	(date 1600813574193)
+@@ -7,12 +7,9 @@
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+ </head>
+ <body>
+-<div class="centrage">
++<div class="log">
+     <form method="POST" action="/TAP/index.php/Ajout_commande.php">
+         <h1>Ajouter une commande : </h1>
+-        <label for="nb_commande"> Numéro de commande </label> :
+-        <input type="text" name="nb_commande" id="nb_commande" />
+-        <br />
+ 
+         <label for="détail"> Détail de la commande </label> :
+         <input type="text" name="détail" id="détail" />
+@@ -25,7 +22,8 @@
+         <label for="nb_client"> Numéro du client </label> :
+         <input type="text" name="nb_client" id="nb_client" />
+         <br />
+-
++        <input type="submit" value="Ajouter"/>
++        <button href="/TAP/index.php/Liste_commande.php">Annuler </button>
+     </form>
+ </div>
+ </body>
+Index: controllers.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nfunction accueil_action($login,$error){\r\n    require 'view/accueil.php';\r\n}\r\nfunction login_action($login,$error)\r\n{\r\n    $login='';\r\n    $error='';\r\n    require 'view/login.php';\r\n}\r\n\r\nfunction information_action()\r\n{\r\n    require 'view/information.php';\r\n}\r\nfunction admin_action($login,$error)\r\n{\r\n    require 'view/admin.php';\r\n}\r\nfunction users_action($login,$error){\r\n    require 'view/users.php';\r\n}\r\n//Mvc de la page register vehicule\r\nfunction vehicule(){\r\n    require 'view/Register_vehicule.php';\r\n}\r\nfunction ajout_commande_action (){\r\n    require 'view/Ajout_commande.php';\r\n}\r\nfunction commande_action (){\r\n    ajout_commande();\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- controllers.php	(revision 882800eff47e6593e7976475decbd1401440c763)
++++ controllers.php	(date 1600914384266)
+@@ -30,4 +30,16 @@
+ }
+ function commande_action (){
+     ajout_commande();
++}
++//affiche la liste des commandes
++function liste_commande( $login, $password)
++{
++    $posts = get_all_posts();
++    require 'view/Liste_commande.php';
++}
++//affiche le détail d'une commande sélectionnée
++function post_action($id,$login,$error)
++{
++    $post = get_post($id);
++    require 'view/detail_commande.php';
+ }
+\ No newline at end of file
+Index: view/Liste_commande.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- view/Liste_commande.php	(revision 882800eff47e6593e7976475decbd1401440c763)
++++ view/Liste_commande.php	(date 1600914290490)
+@@ -1,1 +1,25 @@
+-<?php
++<?php $title= 'Exemple Liste commande'; ?>
++<?php ob_start(); ?>
++<!DOCTYPE html>
++<html lang="fr">
++<head>
++    <title> Liste commande </title>
++    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
++</head>
++<body>
++<div>
++    <h1> Liste des commandes </h1>
++    <?php foreach( $posts as $post ) : ?>
++        <li>
++            <a href="detail_commande.php">
++                <p> Commande </p><?php echo $post['id_commande']; ?> </p>
++            </a>
++            <button href="">Supprimer </button>
++        </li>
++    <?php endforeach ?>
++    <button href="users.php"> Retour </button>
++</div>
++</body>
++</html>
++<?php $content = ob_get_clean(); ?>
++<?php include 'layout.php'; ?>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e891646a-2653-48bb-8c98-1da540ec5576\" name=\"Default Changelist\" comment=\"ajout logo dans login\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/controllers.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/controllers.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/index.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/index.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/model.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/model.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/view/ajout_commande.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/view/ajout_commande.php\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\">\r\n    <execution />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"PhpServers\">\r\n    <servers>\r\n      <server host=\"localhost\" id=\"35c203b5-f88e-4939-b2f6-817d6a3cc702\" name=\"Unnamed\" />\r\n    </servers>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1hc8tsNjwkRs34CifCwWMDZBKnk\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/..\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"project.propVCSSupport.Mappings\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"PHP Web Page.localhost\">\r\n    <configuration name=\"register.php\" type=\"PhpLocalRunConfigurationType\" factoryName=\"PHP Console\" path=\"$PROJECT_DIR$/view/register.php\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"localhost\" type=\"PhpWebAppRunConfigurationType\" factoryName=\"PHP Web Application\" server_name=\"Unnamed\" start_url=\"/TAP/\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e891646a-2653-48bb-8c98-1da540ec5576\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1600299237191</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1600299237191</updated>\r\n      <workItem from=\"1600299238270\" duration=\"496000\" />\r\n      <workItem from=\"1600299739584\" duration=\"2000\" />\r\n      <workItem from=\"1600299765947\" duration=\"816000\" />\r\n      <workItem from=\"1600300943665\" duration=\"1612000\" />\r\n      <workItem from=\"1600302844233\" duration=\"1783000\" />\r\n      <workItem from=\"1600336652665\" duration=\"676000\" />\r\n      <workItem from=\"1600584434452\" duration=\"11188000\" />\r\n      <workItem from=\"1600605560255\" duration=\"4132000\" />\r\n      <workItem from=\"1600740418961\" duration=\"861000\" />\r\n      <workItem from=\"1600741285409\" duration=\"2895000\" />\r\n      <workItem from=\"1600810679465\" duration=\"203000\" />\r\n      <workItem from=\"1600810888465\" duration=\"2530000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"ajout logo dans login\">\r\n      <created>1600303314645</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1600303314645</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"ajout logo dans login\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"ajout logo dans login\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"807\" y=\"196\" key=\"#CLI_Interpreters\" timestamp=\"1600588832662\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"807\" y=\"196\" key=\"#CLI_Interpreters/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1600588832662\" />\r\n    <state x=\"665\" y=\"0\" key=\"#PHP\" timestamp=\"1600810841592\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"738\" />\r\n    </state>\r\n    <state x=\"665\" y=\"0\" key=\"#PHP/0.0.1366.738@0.0.1366.738\" timestamp=\"1600810841592\" />\r\n    <state x=\"934\" y=\"184\" key=\"#PHP/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1600588833246\" />\r\n    <state x=\"572\" y=\"79\" key=\"#Servers\" timestamp=\"1600300974741\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"572\" y=\"79\" key=\"#Servers/0.0.1536.824@0.0.1536.824\" timestamp=\"1600300974741\" />\r\n    <state x=\"558\" y=\"85\" width=\"1092\" height=\"730\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog\" timestamp=\"1600587981464\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"447\" y=\"67\" width=\"1089\" height=\"713\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824\" timestamp=\"1600300982328\" />\r\n    <state x=\"558\" y=\"85\" width=\"1092\" height=\"730\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1600587981464\" />\r\n    <state x=\"308\" y=\"0\" key=\"CommitChangelistDialog2\" timestamp=\"1600811037710\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"738\" />\r\n    </state>\r\n    <state x=\"308\" y=\"0\" key=\"CommitChangelistDialog2/0.0.1366.738@0.0.1366.738\" timestamp=\"1600811037710\" />\r\n    <state x=\"1023\" y=\"194\" key=\"FileChooserDialogImpl\" timestamp=\"1600741123356\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"818\" y=\"154\" key=\"FileChooserDialogImpl/0.0.1536.824@0.0.1536.824\" timestamp=\"1600299872454\" />\r\n    <state x=\"1023\" y=\"194\" key=\"FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1600741123356\" />\r\n    <state x=\"917\" y=\"310\" key=\"Github.ShareDialog\" timestamp=\"1600299956340\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"917\" y=\"310\" key=\"Github.ShareDialog/0.0.1536.824@0.0.1536.824\" timestamp=\"1600299956340\" />\r\n    <state x=\"898\" y=\"117\" key=\"Github.UntrackedFilesDialog\" timestamp=\"1600299982693\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"898\" y=\"117\" key=\"Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824\" timestamp=\"1600299982693\" />\r\n    <state x=\"131\" y=\"58\" key=\"MergeDialog\" timestamp=\"1600810510157\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"738\" />\r\n    </state>\r\n    <state x=\"131\" y=\"58\" key=\"MergeDialog/0.0.1366.738@0.0.1366.738\" timestamp=\"1600810510157\" />\r\n    <state x=\"147\" y=\"65\" key=\"MergeDialog/0.0.1536.824@0.0.1536.824\" timestamp=\"1600302859417\" />\r\n    <state x=\"321\" y=\"130\" key=\"MultipleFileMergeDialog\" timestamp=\"1600810518993\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"738\" />\r\n    </state>\r\n    <state x=\"321\" y=\"130\" key=\"MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738\" timestamp=\"1600810518993\" />\r\n    <state x=\"555\" y=\"60\" key=\"SettingsEditor\" timestamp=\"1600299703489\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"555\" y=\"60\" key=\"SettingsEditor/0.0.1536.824@0.0.1536.824\" timestamp=\"1600299703489\" />\r\n    <state x=\"361\" y=\"145\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1600337906334\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"361\" y=\"145\" key=\"Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824\" timestamp=\"1600337906334\" />\r\n    <state x=\"761\" y=\"292\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1600812848312\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"738\" />\r\n    </state>\r\n    <state x=\"761\" y=\"292\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738\" timestamp=\"1600812848312\" />\r\n    <state x=\"856\" y=\"326\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824\" timestamp=\"1600336656046\" />\r\n    <state x=\"429\" y=\"0\" width=\"1010\" height=\"672\" key=\"dock-window-1\" timestamp=\"1600586165044\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"429\" y=\"0\" width=\"1010\" height=\"672\" key=\"dock-window-1/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1600586165044\" />\r\n    <state x=\"463\" y=\"81\" key=\"git4idea.branch.GitSmartOperationDialog\" timestamp=\"1600810600890\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"738\" />\r\n    </state>\r\n    <state x=\"463\" y=\"81\" key=\"git4idea.branch.GitSmartOperationDialog/0.0.1366.738@0.0.1366.738\" timestamp=\"1600810600890\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 882800eff47e6593e7976475decbd1401440c763)
++++ .idea/workspace.xml	(date 1601120333152)
+@@ -19,12 +19,11 @@
+     <select />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="e891646a-2653-48bb-8c98-1da540ec5576" name="Default Changelist" comment="ajout logo dans login">
++    <list default="true" id="e891646a-2653-48bb-8c98-1da540ec5576" name="Default Changelist" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/controllers.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/view/ajout_commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/ajout_commande.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/view/Ajout_commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Ajout_commande.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/view/Liste_commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Liste_commande.php" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -88,7 +87,7 @@
+       <workItem from="1600740418961" duration="861000" />
+       <workItem from="1600741285409" duration="2895000" />
+       <workItem from="1600810679465" duration="203000" />
+-      <workItem from="1600810888465" duration="2530000" />
++      <workItem from="1600810888465" duration="11508000" />
+     </task>
+     <task id="LOCAL-00001" summary="ajout logo dans login">
+       <created>1600303314645</created>
+@@ -97,7 +96,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1600303314645</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="implementation ajout commande">
++      <created>1600813479509</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1600813479509</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -117,7 +123,8 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="ajout logo dans login" />
+-    <option name="LAST_COMMIT_MESSAGE" value="ajout logo dans login" />
++    <MESSAGE value="implementation ajout commande" />
++    <option name="LAST_COMMIT_MESSAGE" value="implementation ajout commande" />
+   </component>
+   <component name="WindowStateProjectService">
+     <state x="807" y="196" key="#CLI_Interpreters" timestamp="1600588832662">
+@@ -138,10 +145,10 @@
+     </state>
+     <state x="447" y="67" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1600300982328" />
+     <state x="558" y="85" width="1092" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600587981464" />
+-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1600811037710">
++    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1600813476468">
+       <screen x="0" y="0" width="1366" height="738" />
+     </state>
+-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1600811037710" />
++    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1600813476468" />
+     <state x="1023" y="194" key="FileChooserDialogImpl" timestamp="1600741123356">
+       <screen x="0" y="0" width="1920" height="1040" />
+     </state>
+@@ -164,6 +171,10 @@
+       <screen x="0" y="0" width="1366" height="738" />
+     </state>
+     <state x="321" y="130" key="MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1600810518993" />
++    <state x="517" y="292" key="NewPhpFileDialog" timestamp="1600914156836">
++      <screen x="0" y="0" width="1366" height="738" />
++    </state>
++    <state x="517" y="292" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1600914156836" />
+     <state x="555" y="60" key="SettingsEditor" timestamp="1600299703489">
+       <screen x="0" y="0" width="1536" height="824" />
+     </state>
