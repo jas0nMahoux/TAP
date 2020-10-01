@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="header_droite">
-        <p class="link2"><a href="/TAP/index.php/login.php">login</a></p>
+        <p class="link2"><a href="/TAP/index.php/login">login</a></p>
     </div>
     <div class="log">
         <h1> Qui sommes nous ?</h1>

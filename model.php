@@ -35,10 +35,10 @@ function is_admin( $login, $password )
     return $isadmin;
 }
 
-function get_all_posts()
+function get_all_commande()
 {
     $link = open_database_connection();
-    $resultall = mysqli_query($link,'SELECT id, title FROM Post');
+    $resultall = mysqli_query($link,'SELECT id_commande, details FROM commande');
     $posts = array();
     while ($row = mysqli_fetch_assoc($resultall)) {
         $posts[] = $row;
@@ -51,7 +51,7 @@ function get_post( $id )
 {
     $link = open_database_connection();
     $id = intval($id);
-    $result = mysqli_query($link, 'SELECT * FROM Post WHERE id='.$id );
+    $result = mysqli_query($link, 'SELECT * FROM Post WHERE id="'.$id.'"');
     $post = mysqli_fetch_assoc($result);
     mysqli_free_result( $result);
     close_database_connection($link);
@@ -97,30 +97,21 @@ function supp_annonce($id_supp){
     close_database_connection($link);
 }
 
-function ajout_commande(){
-    $sql='INSERT INTO commande (id_commande, details, adresse_livraison, num_client)
-        VALUES ("''", "'.$_POST[details]'" , "''" ,"''")';
+function ajout_commande($detail, $adresse,$nb_client ){
+    $link = open_database_connection();
+    $query = 'INSERT INTO commande (details, adresse_livraison, num_client) 
+    VALUES ("'.$detail.'", "'.$adresse.'", "'.$nb_client.'")';
+    mysqli_query($link, $query);
+    close_database_connection($link);
 }
 
-/*function cityNC($name)
-{
-    $url = 'https://data.gouv.nc/api/records/1.0/search/';
-    $request_url = $url .'?dataset=offres-demploi&q='. urlencode($name).'&rows=50';
-// initialisation d'une session
-    $curl = curl_init($request_url);
-// spécification des paramètres de connexion
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
-// envoie de la requête et récupération du résultat sous forme d'objet JSON
-    $response = json_decode(curl_exec($curl));
-// fermeture de la session
-    curl_close($curl);
-// stockage des villes et des codes postaux dans un tableau associatif
-    foreach( $response->records as $infoville ){
-        $villes[$infoville->fields->nom_minus]=$infoville->fields->code_post;
-    }
-    return $villes;
-}*/
+function supp_commande($id_supp){
+    $link = open_database_connection();
+    $query = 'DELETE FROM commande where id_commande= "'.$id_supp.'"';
+    mysqli_query($link, $query);
+    close_database_connection($link);
+}
+
+
 ?>
 

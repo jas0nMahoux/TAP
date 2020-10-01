@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="centrage">
-    <form method="POST" action="/TAP/index.php/Register_vehicule.php">
+    <form method="POST" action="/TAP/index.php/Register_vehicule">
 
         <h1>Ajouter un véhicule:</h1>
 
