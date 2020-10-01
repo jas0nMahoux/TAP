@@ -43,6 +43,7 @@ function ajout_commande_action($login,$error)
     require 'view/Ajout_commande.php';
 }
 function users_action($login,$error){
+    $posts = get_all_vehicule();
     if($_SESSION['admin'] == True){
         $login="admin";
         admin_action($login,$error);
