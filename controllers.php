@@ -30,6 +30,9 @@ function admin_action($login,$error)
         echo $_GET['id_supp2'];
         supp_personnel($_GET['id_supp2']);
     }
+    if(isset($_POST['age'])){
+        create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
+    }
     $posts = get_all_vehicule();
     $posts2 = get_all_personnel();
     require 'view/admin.php';
@@ -53,7 +56,7 @@ function users_action($login,$error){
     }
 }
 //Mvc de la page register vehicule
-function vehicule(){
+function vehicule($login,$error){
     require 'view/Register_vehicule.php';
 }
 function compte_action(){
