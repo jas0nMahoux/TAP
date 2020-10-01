@@ -12,11 +12,12 @@ session_start();
 // route la requête en interne
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // vérification utilisateur authentifié
+
 if(isset($_POST['age'])){
     create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
 }
 
-if ( '/TAP/index.php/information.php' == $uri || '/TAP/' == $uri) {
+if ( '/TAP/index.php/information.php' == $uri ) {
     information_action();
     exit;
 }
@@ -24,6 +25,13 @@ elseif ('/TAP/index.php/login.php' == $uri) {
     $error = '';
     $login = '';
     login_action($login, $error);
+    exit;
+}
+
+elseif ('/TAP/index.php/admin.php' == $uri) {
+    $error = '';
+    $login = '';
+    admin_action($login,$error);
     exit;
 }
 
@@ -35,6 +43,7 @@ if( !isset($_SESSION['login']) ) {
     }
     elseif( is_admin($_POST['login'],$_POST['password']) ) {
         $_SESSION['login'] = $_POST['login'] ;
+        $_SESSION['admin'] = True ;
         $login = $_SESSION['login'];
         $error='';
         admin_action($login,$error);
@@ -49,6 +58,7 @@ if( !isset($_SESSION['login']) ) {
     }
     else {
         $_SESSION['login'] = $_POST['login'] ;
+        $_SESSION['admin'] = False ;
         $login = $_SESSION['login'];
         $error='';
     }
@@ -57,13 +67,22 @@ else {
     $login = $_SESSION['login'];
     $error = '';
 }
+
+
+
 //routage
 if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
     accueil_action($login,$error);
     exit;
 }
-elseif ( '/TAP/index.php/admin.php' == $uri ){
-    admin_action($login,$error);
+elseif (('/TAP/index.php/register' == $uri)){
+    register_action($login,$error);
+}
+elseif ( '/TAP/index.php/Liste_commande.php' == $uri ){
+    liste_commande_action($login,$error);
+}
+elseif ( '/TAP/index.php/Ajout_commande.php' == $uri ){
+    ajout_commande_action($login,$error);
 }
 elseif ( '/TAP/index.php/users' == $uri ){
     users_action($login,$error);
