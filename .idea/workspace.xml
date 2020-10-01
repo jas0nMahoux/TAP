@@ -10,13 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be10b070-abcd-493d-8d0c-bcf75d1834ac" name="Default Changelist" comment="implementation $session_admin">
+    <list default="true" id="be10b070-abcd-493d-8d0c-bcf75d1834ac" name="Default Changelist" comment="modification information.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/accueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/information.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/information.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +93,8 @@
       <workItem from="1601361819184" duration="80000" />
       <workItem from="1601506703048" duration="1798000" />
       <workItem from="1601508513604" duration="301000" />
-      <workItem from="1601510331628" duration="342000" />
+      <workItem from="1601510331628" duration="1534000" />
+      <workItem from="1601512636619" duration="529000" />
     </task>
     <task id="LOCAL-00001" summary="ajout logo dans login">
       <created>1600303314645</created>
@@ -142,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601509416399</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="modification information.php">
+      <created>1601510887463</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1601510887463</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +170,8 @@
     <MESSAGE value="fonctionnalité supprimer vehicule" />
     <MESSAGE value="test" />
     <MESSAGE value="implementation $session_admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementation $session_admin" />
+    <MESSAGE value="modification information.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification information.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="807" y="196" key="#CLI_Interpreters" timestamp="1600588832662">
@@ -213,10 +217,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="555" y="60" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600299703489" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601509419665">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601510890151">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601509419665" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601510890151" />
     <state x="451" y="185" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1600813950843" />
     <state x="856" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601507285957">
       <screen x="0" y="0" width="1536" height="824" />
