@@ -13,9 +13,6 @@ session_start();
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // vérification utilisateur authentifié
 
-if(isset($_POST['age'])){
-    create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
-}
 
 if ( '/TAP/index.php/information.php' == $uri ) {
     information_action();
@@ -28,7 +25,7 @@ elseif ('/TAP/index.php/login.php' == $uri) {
     exit;
 }
 
-elseif ('/TAP/index.php/admin.php' == $uri) {
+elseif ('/TAP/index.php/admin' == $uri) {
     $error = '';
     $login = '';
     admin_action($login,$error);
@@ -93,8 +90,8 @@ elseif('/TAP/index.php/logout' == $uri ) {
 // affichage de la page de connexion
     login_action('','');
 }
-elseif('/TAP/index.php/Register_vehicule.php' == $uri ) {
-    vehicule();
+elseif('/TAP/index.php/Register_vehicule' == $uri ) {
+    vehicule($login,$error);
 }
 else {
     header('Status: 404 Not Found');
