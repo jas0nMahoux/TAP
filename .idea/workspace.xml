@@ -19,19 +19,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e891646a-2653-48bb-8c98-1da540ec5576" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/view/Ajout_commande.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/Register_vehicule.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tap.sql" beforeDir="false" afterPath="$PROJECT_DIR$/tap.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/ajout_commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/ajout_commande.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
+    <list default="true" id="287131ad-3220-41d1-9776-5e8e8263e286" name="Default Changelist" comment="ajout map users.php">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_14_17__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_14_17__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_14_20__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_14_20__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_15_23__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_15_23__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_15_25__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_15_25__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_16_08__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_09_2020_16_08__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_29_09_2020_16_54__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_29_09_2020_16_54__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_10_2020_10_41__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_10_2020_10_41__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_09_2020_09_23__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_09_2020_09_23__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_09_2020_10_59__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_09_2020_10_59__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_09_2020_10_59__Default_Changelist_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_09_2020_10_59__Default_Changelist_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_08_27__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_08_27__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_08_27__Default_Changelist_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_08_27__Default_Changelist_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_09_32__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_09_32__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_09_33__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_09_33__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_09_33__Default_Changelist_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_09_33__Default_Changelist_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_09_2020_13_27__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_09_2020_13_27__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_09_2020_13_29__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_09_2020_13_29__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_09_2020_13_38__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_09_2020_13_38__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,25 +68,25 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="PHP Web Page.localhost">
-    <configuration name="register.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/view/register.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="localhost" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Unnamed" start_url="/TAP/">
+  <component name="RunManager">
+    <configuration name="localhost" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="Unnamed" start_url="/TAP/index.php">
       <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="be10b070-abcd-493d-8d0c-bcf75d1834ac" name="Default Changelist" comment="" />
+      <changelist id="287131ad-3220-41d1-9776-5e8e8263e286" name="Default Changelist" comment="" />
       <created>1600299237191</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -88,21 +95,62 @@
       <workItem from="1600299739584" duration="2000" />
       <workItem from="1600299765947" duration="816000" />
       <workItem from="1600300943665" duration="1612000" />
-      <workItem from="1600302844233" duration="1783000" />
-      <workItem from="1600336652665" duration="676000" />
-      <workItem from="1600584434452" duration="11188000" />
-      <workItem from="1600605560255" duration="4132000" />
-      <workItem from="1600740418961" duration="861000" />
-      <workItem from="1600741285409" duration="2895000" />
+      <workItem from="1600302844233" duration="313000" />
+      <workItem from="1600639431406" duration="250000" />
+      <workItem from="1600677590125" duration="2365000" />
+      <workItem from="1600733722135" duration="1722000" />
+      <workItem from="1600735489416" duration="1661000" />
+      <workItem from="1600741356524" duration="1834000" />
+      <workItem from="1600743228814" duration="311000" />
+      <workItem from="1600745216282" duration="841000" />
+      <workItem from="1601358030439" duration="1524000" />
+      <workItem from="1601516739400" duration="680000" />
+      <workItem from="1601518547761" duration="1796000" />
+      <workItem from="1601520356054" duration="357000" />
     </task>
-    <task id="LOCAL-00001" summary="ajout logo dans login">
-      <created>1600303314645</created>
+    <task id="LOCAL-00001" summary="Qui sommes nous ?">
+      <created>1600636738844</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1600303314645</updated>
+      <updated>1600636738844</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Actualisation BDD">
+      <created>1600638255794</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600638255794</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fonction ajouter véhicule, require vehicule, modification &quot;âge&quot;=&quot;age&quot; Register_vehicule.php, modification &quot;âge&quot;=&quot;age&quot; tap.sql, ajout fonction isset age dans index.php">
+      <created>1600744162779</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600744162779</updated>
+    </task>
+    <task id="LOCAL-00004" summary="a">
+      <created>1601516775405</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601516775405</updated>
+    </task>
+    <task id="LOCAL-00005" summary="a">
+      <created>1601516902249</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601516902249</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ajout map users.php">
+      <created>1601520564813</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601520564813</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,32 +169,39 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ajout logo dans login" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout logo dans login" />
+    <MESSAGE value="Qui sommes nous ?" />
+    <MESSAGE value="Actualisation BDD" />
+    <MESSAGE value="Fonction ajouter véhicule, require vehicule, modification &quot;âge&quot;=&quot;age&quot; Register_vehicule.php, modification &quot;âge&quot;=&quot;age&quot; tap.sql, ajout fonction isset age dans index.php" />
+    <MESSAGE value="a" />
+    <MESSAGE value="ajout map users.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout map users.php" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="807" y="196" key="#CLI_Interpreters" timestamp="1600588832662">
+    <state x="540" y="175" key="#CLI_Interpreters" timestamp="1600734608543">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="807" y="196" key="#CLI_Interpreters/0.0.1920.1040@0.0.1920.1040" timestamp="1600588832662" />
-    <state x="934" y="184" key="#PHP" timestamp="1600588833246">
+    <state x="540" y="175" key="#CLI_Interpreters/0.0.1920.1040@0.0.1920.1040" timestamp="1600734608543" />
+    <state x="667" y="163" key="#PHP" timestamp="1600734715453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="934" y="184" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1600588833246" />
+    <state x="667" y="163" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1600734715453" />
     <state x="572" y="79" key="#Servers" timestamp="1600300974741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="572" y="79" key="#Servers/0.0.1536.824@0.0.1536.824" timestamp="1600300974741" />
-    <state x="558" y="85" width="1092" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600587981464">
+    <state x="300" y="88" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600741429119">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="447" y="67" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1600300982328" />
-    <state x="558" y="85" width="1092" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600587981464" />
-    <state x="1023" y="194" key="FileChooserDialogImpl" timestamp="1600741123356">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="447" y="67" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1600636137286" />
+    <state x="300" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600741429119" />
+    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1600638254731">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1600638254731" />
+    <state x="818" y="154" key="FileChooserDialogImpl" timestamp="1600299872454">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="818" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600299872454" />
-    <state x="1023" y="194" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600741123356" />
     <state x="917" y="310" key="Github.ShareDialog" timestamp="1600299956340">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -155,25 +210,37 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="898" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1600299982693" />
-    <state x="147" y="65" key="MergeDialog" timestamp="1600302859417">
+    <state x="184" y="82" key="MergeDialog" timestamp="1601516924272">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1600636099782" />
+    <state x="184" y="82" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601516924272" />
+    <state x="598" y="281" key="MultipleFileMergeDialog" timestamp="1601516924276">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="598" y="281" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601516924276" />
+    <state x="604" y="335" key="NewPhpFileDialog" timestamp="1600678986781">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1600302859417" />
+    <state x="604" y="335" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1600678986781" />
     <state x="555" y="60" key="SettingsEditor" timestamp="1600299703489">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="555" y="60" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600299703489" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600337906334">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600337906334" />
-    <state x="856" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600336656046">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="856" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1600336656046" />
-    <state x="429" y="0" width="1010" height="672" key="dock-window-1" timestamp="1600586165044">
+    <state x="451" y="183" key="Vcs.Push.Dialog.v2" timestamp="1600744177105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="429" y="0" width="1010" height="672" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1600586165044" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600639060853" />
+    <state x="451" y="183" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600744177105" />
+    <state x="1070" y="411" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601358941526">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="856" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1600677599089" />
+    <state x="1070" y="411" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601358941526" />
+    <state x="688" y="158" key="git4idea.branch.GitSmartOperationDialog" timestamp="1600744743783">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="550" y="125" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1600636096530" />
+    <state x="688" y="158" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600744743783" />
   </component>
 </project>
