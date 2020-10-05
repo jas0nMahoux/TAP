@@ -51,10 +51,4 @@ function detail_commande($id,$login,$error)
     $post = get_post($id);
     require 'view/detail_commande.php';
 }
-/*function detail_commande()
-{
-    $id=$_GET['id_commande'];
-    $post = get_post($id);
-    require 'view/detail_commande.php';
-}*/
 
