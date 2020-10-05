@@ -84,13 +84,17 @@ elseif ('/TAP/index.php/Liste_commande' == $uri ){
 elseif (isset($_POST['nb_client'])){
     commande_action();
 }
-elseif('/TAP/index.php/detail_commande' == $uri) {
+/*elseif('/TAP/index.php/detail_commande' == $uri) {
     detail_commande();
+}*/
+elseif ('/TAP/index.php/detail_commande' == $uri && isset($_GET['id_commande'])) {
+    detail_commande($_GET['id_commande'],$login,$error);
 }
 else {
     header('Status: 404 Not Found');
     echo '<html><body><h1>My Page NotFound</h1></body></html>';
 }
+
 
 /*
 //bouton supprimer commande
@@ -102,6 +106,7 @@ if(isset($_POST['age'])){
     create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
 }
 */
+
 ?>
 
 

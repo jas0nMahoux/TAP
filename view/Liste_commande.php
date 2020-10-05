@@ -9,7 +9,6 @@
 <body>
 <div class="log">
     <h1> Liste des commandes </h1>
-
         <ul>
             <?php foreach( $posts as $post ) : ?>
                 <li>
@@ -27,5 +26,6 @@
 </div>
 </body>
 </html>
+
 <?php $content = ob_get_clean(); ?>
 <?php include 'layout.php'; ?>
