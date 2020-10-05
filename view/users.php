@@ -3,14 +3,12 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin=""/>
-    <h1>Tableau de bord</h1>
-    <div>
+    <h1 class="log">Tableau de bord</h1>
+    <div class="log">
         <form method="post" action="/TAP/index.php/Ajout_commande.php">
             <h2>Commande</h2>
             <input type="submit" value="Ajouter une commande">
         </form>
-    </div>
-    <div>
         <form method="post" action="/TAP/index.php/Liste_commande.php">
             <input type="submit" value="Liste des commande">
         </form>
@@ -35,16 +33,16 @@
             .bindPopup()
             .openPopup();
     </script>
-    <div>
-        <h2>Véhicule</h2>
-    </div>
-    <div>
-        Information véhivule
-        <button type="button"> Fermer </button>
-    </div>
-    <div>
-        Information commande
-        <button type="button"> Fermer </button>
+    <div class="log">
+        <h1>List of vehicule</h1>
+        <ul>
+            <?php foreach( $posts as $post ): ?>
+                <li>
+                    <?php echo $post['immatriculation']; echo '-->'; echo $post['modele'] ?>
+                    <form method="post" action="/TAP/index.php/users?id_supp=<?php echo $post['immatriculation'];?>"></form>
+                </li>
+            <?php endforeach ?>
+        </ul>
     </div>
 <?php $content = ob_get_clean(); ?>
 <?php include 'layout.php'; ?>
