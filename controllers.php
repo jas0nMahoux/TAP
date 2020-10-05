@@ -37,7 +37,7 @@ function users_action($login,$error){
 function vehicule(){
     require 'view/Register_vehicule.php';
 }
-function liste_commande (){
+function liste_commande ($login,$error){
     if(isset($_GET['id_supp'])){
         supp_commande($_GET['id_supp']);
     }

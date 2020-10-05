@@ -79,7 +79,7 @@ elseif ('/TAP/index.php/Ajout_commande' == $uri ){
     ajout_commande_action($login, $error);
 }
 elseif ('/TAP/index.php/Liste_commande' == $uri ){
-    liste_commande ();
+    liste_commande ($login,$error);
 }
 elseif (isset($_POST['nb_client'])){
     commande_action();

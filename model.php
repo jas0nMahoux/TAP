@@ -51,7 +51,8 @@ function get_post( $id )
 {
     $link = open_database_connection();
     $id = intval($id);
-    $result = mysqli_query($link, 'SELECT * FROM Post WHERE id="'.$id.'"');
+    $query = 'SELECT * FROM commande WHERE id_commande="'.$id.'"';
+    $result = mysqli_query($link, $query);
     $post = mysqli_fetch_assoc($result);
     mysqli_free_result( $result);
     close_database_connection($link);
