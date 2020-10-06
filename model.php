@@ -82,6 +82,26 @@ function get_post( $id )
     close_database_connection($link);
     return $post;
 }
+function get_data( $immatriculation )
+{
+    $link = open_database_connection();
+    $immatriculation = intval($immatriculation);
+    $result = mysqli_query($link, 'SELECT latitude FROM capteur WHERE id='.$immatriculation );
+    $data = mysqli_fetch_assoc($result);
+    mysqli_free_result( $result);
+    close_database_connection($link);
+    return $data;
+}
+function get_data2( $immatriculation )
+{
+    $link = open_database_connection();
+    $immatriculation = intval($immatriculation);
+    $result = mysqli_query($link, 'SELECT longitude FROM capteur WHERE id='.$immatriculation );
+    $data2 = mysqli_fetch_assoc($result);
+    mysqli_free_result( $result);
+    close_database_connection($link);
+    return $data2;
+}
 
 function create_account()
 {

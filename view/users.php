@@ -29,9 +29,18 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        L.marker([-22.275800, 166.458000]).addTo(map)
+        var myIcon = L.icon({
+            iconUrl: "/TAP/img/LOGO.png",
+            iconSize: [75, 75],
+            iconAnchor: [25, 50],
+            popupAnchor: [13, -45],
+
+        });
+
+        L.marker([<?php $data ?>, <?php $data2 ?>],{ icon: myIcon }).addTo(map)
             .bindPopup()
             .openPopup();
+
     </script>
     <div class="log">
         <h1>List of vehicule</h1>
