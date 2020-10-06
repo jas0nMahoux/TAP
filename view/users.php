@@ -3,11 +3,11 @@
     <h1 class="log">Tableau de bord</h1>
     </br>
     <div class="log">
-        <form method="post" action="/TAP/index.php/Ajout_commande.php">
+        <form method="post" action="/TAP/index.php/Ajout_commande">
         <h2>Commande</h2>
             <input type="submit" value="Ajouter une commande">
         </form>
-        <form method="post" action="/TAP/index.php/Liste_commande.php">
+        <form method="post" action="/TAP/index.php/Liste_commande">
             <input type="submit" value="Liste des commande">
         </form>
     </div>
