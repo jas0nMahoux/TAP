@@ -4,10 +4,12 @@ function open_database_connection()
     $link = mysqli_connect('localhost', 'root', '', 'tap');
 return $link;
 }
+
 function close_database_connection($link)
 {
 mysqli_close($link);
 }
+
 function is_user( $login, $password )
 {
 $isuser = False ;
@@ -33,10 +35,10 @@ function is_admin( $login, $password )
     return $isadmin;
 }
 
-function get_all_vehicule()
+function get_all_commande()
 {
     $link = open_database_connection();
-    $resultall = mysqli_query($link,'SELECT immatriculation, modele FROM vehicule');
+    $resultall = mysqli_query($link,'SELECT id_commande, details FROM commande');
     $posts = array();
     while ($row = mysqli_fetch_assoc($resultall)) {
         $posts[] = $row;
@@ -45,38 +47,12 @@ function get_all_vehicule()
     close_database_connection($link);
     return $posts;
 }
-
-function supp_vehicule($id_supp){
-    $link = open_database_connection();
-    $query = 'delete from vehicule where immatriculation="'.$id_supp.'"';
-    mysqli_query($link, $query);
-    close_database_connection($link);
-}
-
-function supp_personnel($id_supp2){
-    $link = open_database_connection();
-    $query = 'delete from personnel where id_perso="'.$id_supp2.'"';
-    mysqli_query($link, $query);
-    close_database_connection($link);
-}
-
-function get_all_personnel()
-{
-    $link = open_database_connection();
-    $resultall = mysqli_query($link,'SELECT nom, prenom,id_perso FROM personnel');
-    $posts2 = array();
-    while ($row = mysqli_fetch_assoc($resultall)) {
-        $posts2[] = $row;
-    }
-    mysqli_free_result( $resultall);
-    close_database_connection($link);
-    return $posts2;
-}
 function get_post( $id )
 {
     $link = open_database_connection();
     $id = intval($id);
-    $result = mysqli_query($link, 'SELECT * FROM Post WHERE id='.$id );
+    $query = 'SELECT * FROM commande WHERE id_commande="'.$id.'"';
+    $result = mysqli_query($link, $query);
     $post = mysqli_fetch_assoc($result);
     mysqli_free_result( $result);
     close_database_connection($link);
@@ -85,11 +61,11 @@ function get_post( $id )
 
 function create_account()
 {
-    $link = open_database_connection();
-    $query = 'INSERT INTO personnel ( nom, prenom, login, password, Ville, Tel, Mail) 
-        VALUES ("'.$_POST['nom'].'", "'.$_POST['prenom'].'", "'.$_POST['login'].'", "'.$_POST['password'].'","'.$_POST['Ville'].'","'.$_POST['Tel'].'","'.$_POST['Mail'].'")';
-    mysqli_query($link, $query);
-    close_database_connection($link);
+        $link = open_database_connection();
+        $query = 'INSERT INTO users (login, password, nom, prenom, mail, pays, ville)
+        VALUES ("'.$_POST['login'].'", "'.$_POST['password'].'", "'.$_POST['nom'].'", "'.$_POST['prenom'].'", "'.$_POST['mail'].'", "'.$_POST['pays'].'", "'.$_POST['ville'].'")';
+        mysqli_query($link, $query);
+        close_database_connection($link);
 
 }
 
@@ -121,34 +97,22 @@ function supp_annonce($id_supp){
     mysqli_query($link, $query);
     close_database_connection($link);
 }
-//fonction création véhicule
-function create_car($immatriculation,$modele,$age){
+
+function ajout_commande($detail, $adresse,$nb_client ){
     $link = open_database_connection();
-    mysqli_query($link,'INSERT INTO vehicule (immatriculation,modele,age) VALUES ("'.$immatriculation.'","'.$modele.'","'.$age.'")');
+    $query = 'INSERT INTO commande (details, adresse_livraison, num_client) 
+    VALUES ("'.$detail.'", "'.$adresse.'", "'.$nb_client.'")';
+    mysqli_query($link, $query);
+    close_database_connection($link);
+}
+
+function supp_commande($id_supp){
+    $link = open_database_connection();
+    $query = 'DELETE FROM commande where id_commande= "'.$id_supp.'"';
+    mysqli_query($link, $query);
     close_database_connection($link);
 }
 
 
-function cityNC($name)
-{
-    $url = 'https://data.gouv.nc/api/records/1.0/search/';
-    $request_url = $url .'?dataset=communes-nc&q='. urlencode($name).'&rows=50';
-// initialisation d'une session
-    $curl = curl_init($request_url);
-// spécification des paramètres de connexion
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
-// envoie de la requête et récupération du résultat sous forme d'objet JSON
-    $response = json_decode(curl_exec($curl));
-// fermeture de la session
-    curl_close($curl);
-// stockage des villes et des codes postaux dans un tableau associatif
-    foreach( $response->records as $infoville ){
-        $villes[$infoville->fields->nom_minus]=$infoville->fields->code_post;
-    }
-    return $villes;
-}
 ?>
-
 
