@@ -77,7 +77,7 @@ elseif('/TAP/index.php/logout' == $uri ) {
 elseif('/TAP/index.php/Register_vehicule' == $uri ) {
     vehicule($login, $error);
 }
-elseif ('/TAP/index.php/Ajout_commande' == $uri ){
+elseif ('/TAP/index.php/ajout_commande' == $uri ){
     ajout_commande_action($login, $error);
 }
 elseif ('/TAP/index.php/Liste_commande' == $uri ){

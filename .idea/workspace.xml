@@ -11,8 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be10b070-abcd-493d-8d0c-bcf75d1834ac" name="Default Changelist" comment="maintenance du site">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/Ajout_commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Ajout_commande.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/ajout_commande.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/users.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +103,8 @@
       <workItem from="1601943854540" duration="1512000" />
       <workItem from="1601951741362" duration="1801000" />
       <workItem from="1601953560917" duration="1809000" />
-      <workItem from="1601955383626" duration="1132000" />
+      <workItem from="1601955383626" duration="1839000" />
+      <workItem from="1601957234796" duration="644000" />
     </task>
     <task id="LOCAL-00001" summary="ajout logo dans login">
       <created>1600303314645</created>
@@ -236,7 +239,21 @@
       <option name="project" value="LOCAL" />
       <updated>1601956355003</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="maintenance du site">
+      <created>1601956650558</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1601956650558</updated>
+    </task>
+    <task id="LOCAL-00021" summary="maintenance du site">
+      <created>1601956813084</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1601956813084</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +304,10 @@
     </state>
     <state x="447" y="67" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601348736345" />
     <state x="558" y="85" width="1092" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600587981464" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601956735160">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601956735160" />
     <state x="1023" y="194" key="FileChooserDialogImpl" timestamp="1600741123356">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -356,6 +377,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1601956396693" />
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1601956761757">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1601956761757" />
     <state x="555" y="60" key="SettingsEditor" timestamp="1600299703489">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -8,14 +8,11 @@
 </head>
 <body>
 <div class="centrage">
-    <form method="POST" action="/TAP/index.php/Ajout_commande.php">
+    <form method="POST" action="/TAP/index.php/ajout_commande">
         <h1>Ajouter une commande : </h1>
-        <label for="nb_commande"> Numéro de commande </label> :
-        <input type="text" name="nb_commande" id="nb_commande" />
-        <br />
 
-        <label for="détail"> Détail de la commande </label> :
-        <input type="text" name="détail" id="détail" />
+        <label for="detail"> Détail de la commande </label> :
+        <input type="text" name="detail" id="detail" />
         <br />
 
         <label for="adresse"> Adresse de livraison </label> :
@@ -25,8 +22,9 @@
         <label for="nb_client"> Numéro du client </label> :
         <input type="text" name="nb_client" id="nb_client" />
         <br />
-
+        <input type="submit" value="Envoyer"/>
     </form>
+        <a href="/TAP/index.php/users">Retour</a>
 </div>
 </body>
 </html>

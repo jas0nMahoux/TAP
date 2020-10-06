@@ -5,7 +5,7 @@
           crossorigin=""/>
     <h1 class="log">Tableau de bord</h1>
     <div class="log">
-        <form method="post" action="/TAP/index.php/Ajout_commande">
+        <form method="post" action="/TAP/index.php/ajout_commande">
             <h2>Commande</h2>
             <input type="submit" value="Ajouter une commande">
         </form>
