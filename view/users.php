@@ -4,7 +4,7 @@
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin=""/>
     <h1 class="log">Tableau de bord</h1>
-    <div class="log">
+    <div class="alignement">
         <form method="post" action="/TAP/index.php/ajout_commande">
             <h2>Commande</h2>
             <input type="submit" value="Ajouter une commande">
@@ -14,14 +14,14 @@
         </form>
     </div>
 
-    <div id="map" class="log" style="height: 732px; width:732px; position: relative; outline: none;" tabindex="0"></div>
+    <div id="map" class="alignement" style="height: 500px; width:500px; position: relative; outline: none;" tabindex="0"></div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin="">
 
     </script>
     <script>
-        var map = L.map('map').setView([-22.275800, 166.458000],15);
+        var map = L.map('map').setView([-21.275800, 165.458000],8);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -31,7 +31,7 @@
             .bindPopup()
             .openPopup();
     </script>
-    <div class="log">
+    <div class="alignement">
         <h1>List of vehicule</h1>
         <ul>
             <?php foreach( $posts as $post ): ?>
