@@ -49,6 +49,7 @@ function ajout_commande_action($login,$error)
 }
 function users_action($login,$error){
     $posts = get_all_vehicule();
+    $com = get_commande();
     if($_SESSION['admin'] == True){
         $login="admin";
         admin_action($login,$error);
@@ -80,7 +81,6 @@ function detail_commande($id,$login,$error)
     $post = get_post($id);
     require 'view/detail_commande.php';
 }
-
 function register_action($login,$error)
 {
     require 'view/register.php';

@@ -6,7 +6,17 @@
     <h1 class="log">Tableau de bord</h1>
     <div class="log">
         <form method="post" action="/TAP/index.php/ajout_commande">
-            <h2>Commande</h2>
+            <h2>Commande en cours :</h2>
+            <div>
+                <ul>
+                    <?php foreach( $posts as $com ): ?>
+                        <li>
+                            <?php echo $com['id_commande']; echo '-->'; echo $com['En_cours'] ?>
+                            <form method="post" action="/TAP/index.php/users?id_commande=<?php echo $com['id_commande'];?>"></form>
+                        </li>
+                    <?php endforeach ?>
+                </ul>
+            </div>
             <input type="submit" value="Ajouter une commande">
         </form>
         <form method="post" action="/TAP/index.php/Liste_commande">
@@ -27,7 +37,7 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        L.marker([-22.275800, 166.458000]).addTo(map)
+        L.marker([-22.275800, 166.458000],{ icon: myIcon }).addTo(map)
             .bindPopup()
             .openPopup();
     </script>
