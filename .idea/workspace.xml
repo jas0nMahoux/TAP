@@ -100,7 +100,7 @@
       <workItem from="1601943854540" duration="1512000" />
       <workItem from="1601951741362" duration="1801000" />
       <workItem from="1601953560917" duration="1809000" />
-      <workItem from="1601955383626" duration="417000" />
+      <workItem from="1601955383626" duration="773000" />
     </task>
     <task id="LOCAL-00001" summary="ajout logo dans login">
       <created>1600303314645</created>
@@ -207,7 +207,21 @@
       <option name="project" value="LOCAL" />
       <updated>1601953429444</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="maintenance du site">
+      <created>1601955925399</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1601955925399</updated>
+    </task>
+    <task id="LOCAL-00017" summary="maintenance du site">
+      <created>1601956075964</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1601956075964</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +250,8 @@
     <MESSAGE value="ajustement ADMIN" />
     <MESSAGE value="map test" />
     <MESSAGE value="r" />
-    <option name="LAST_COMMIT_MESSAGE" value="r" />
+    <MESSAGE value="maintenance du site" />
+    <option name="LAST_COMMIT_MESSAGE" value="maintenance du site" />
   </component>
   <component name="WindowStateProjectService">
     <state x="807" y="196" key="#CLI_Interpreters" timestamp="1600588832662">
