@@ -14,21 +14,14 @@ $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // vérification utilisateur authentifié
 
 
-if ( '/TAP/index.php/information.php' == $uri ) {
+if ( '/TAP/index.php/information' == $uri || '/TAP/' == $uri) {
     information_action();
     exit;
 }
-elseif ('/TAP/index.php/login.php' == $uri) {
+elseif ('/TAP/index.php/login' == $uri) {
     $error = '';
     $login = '';
     login_action($login, $error);
-    exit;
-}
-
-elseif ('/TAP/index.php/admin' == $uri) {
-    $error = '';
-    $login = '';
-    admin_action($login,$error);
     exit;
 }
 
@@ -40,7 +33,6 @@ if( !isset($_SESSION['login']) ) {
     }
     elseif( is_admin($_POST['login'],$_POST['password']) ) {
         $_SESSION['login'] = $_POST['login'] ;
-        $_SESSION['admin'] = True ;
         $login = $_SESSION['login'];
         $error='';
         admin_action($login,$error);
@@ -55,7 +47,6 @@ if( !isset($_SESSION['login']) ) {
     }
     else {
         $_SESSION['login'] = $_POST['login'] ;
-        $_SESSION['admin'] = False ;
         $login = $_SESSION['login'];
         $error='';
     }
@@ -64,22 +55,13 @@ else {
     $login = $_SESSION['login'];
     $error = '';
 }
-
-
-
 //routage
 if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
     accueil_action($login,$error);
     exit;
 }
-elseif (('/TAP/index.php/register' == $uri)){
-    register_action($login,$error);
-}
-elseif ( '/TAP/index.php/Liste_commande.php' == $uri ){
-    liste_commande_action($login,$error);
-}
-elseif ( '/TAP/index.php/Ajout_commande.php' == $uri ){
-    ajout_commande_action($login,$error);
+elseif ( '/TAP/index.php/admin' == $uri ){
+    admin_action($login,$error);
 }
 elseif ( '/TAP/index.php/users' == $uri ){
     users_action($login,$error);
@@ -91,12 +73,36 @@ elseif('/TAP/index.php/logout' == $uri ) {
     login_action('','');
 }
 elseif('/TAP/index.php/Register_vehicule' == $uri ) {
-    vehicule($login,$error);
+    vehicule();
+}
+elseif ('/TAP/index.php/Ajout_commande' == $uri ){
+    ajout_commande_action($login, $error);
+}
+elseif ('/TAP/index.php/Liste_commande' == $uri ){
+    liste_commande ($login,$error);
+}
+elseif (isset($_POST['nb_client'])){
+    commande_action();
+}
+elseif ('/TAP/index.php/detail_commande' == $uri && isset($_GET['id_commande'])) {
+    detail_commande($_GET['id_commande'],$login,$error);
 }
 else {
     header('Status: 404 Not Found');
     echo '<html><body><h1>My Page NotFound</h1></body></html>';
 }
+
+
+/*
+//bouton supprimer commande
+elseif (isset($_POST['supp'])) {
+    $id = $_POST['supp'];
+    echo $id;
+
+if(isset($_POST['age'])){
+    create_car($_POST['immatriculation'],$_POST['modele'],$_POST['age']);
+}
+*/
 
 ?>
 
