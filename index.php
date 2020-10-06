@@ -14,7 +14,7 @@ $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // vérification utilisateur authentifié
 
 
-if ( '/TAP/index.php/information' == $uri || '/TAP/' == $uri) {
+if ( '/TAP/index.php/information' == $uri) {
     information_action();
     exit;
 }
@@ -33,6 +33,7 @@ if( !isset($_SESSION['login']) ) {
     }
     elseif( is_admin($_POST['login'],$_POST['password']) ) {
         $_SESSION['login'] = $_POST['login'] ;
+        $_SESSION['admin'] = True ;
         $login = $_SESSION['login'];
         $error='';
         admin_action($login,$error);
@@ -47,6 +48,7 @@ if( !isset($_SESSION['login']) ) {
     }
     else {
         $_SESSION['login'] = $_POST['login'] ;
+        $_SESSION['admin'] = False ;
         $login = $_SESSION['login'];
         $error='';
     }
@@ -73,7 +75,7 @@ elseif('/TAP/index.php/logout' == $uri ) {
     login_action('','');
 }
 elseif('/TAP/index.php/Register_vehicule' == $uri ) {
-    vehicule();
+    vehicule($login, $error);
 }
 elseif ('/TAP/index.php/Ajout_commande' == $uri ){
     ajout_commande_action($login, $error);
@@ -87,10 +89,16 @@ elseif (isset($_POST['nb_client'])){
 elseif ('/TAP/index.php/detail_commande' == $uri && isset($_GET['id_commande'])) {
     detail_commande($_GET['id_commande'],$login,$error);
 }
+
+elseif (('/TAP/index.php/register' == $uri)){
+    register_action($login,$error);
+}
+
 else {
     header('Status: 404 Not Found');
     echo '<html><body><h1>My Page NotFound</h1></body></html>';
 }
+
 
 
 /*

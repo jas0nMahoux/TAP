@@ -8,7 +8,7 @@
     </div>
     <footer>
         <p>contactez nous en cas de probléme sur l'adrresse adminTAP@gmail.com</p>
-        <a href="/TAP/index.php/information.php">Qui sommes nous ?</a>
+        <a href="/TAP/index.php/information">Qui sommes nous ?</a>
     </footer>
 <?php $content = ob_get_clean(); ?>
 <?php include 'layout.php'; ?>
