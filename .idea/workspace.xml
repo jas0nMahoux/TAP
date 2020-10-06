@@ -12,6 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="be10b070-abcd-493d-8d0c-bcf75d1834ac" name="Default Changelist" comment="maintenance du site">
       <change beforePath="$PROJECT_DIR$/view/Ajout_commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Ajout_commande.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/ajout_commande.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
