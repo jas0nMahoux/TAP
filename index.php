@@ -56,6 +56,7 @@ if( !isset($_SESSION['login']) ) {
 else {
     $login = $_SESSION['login'];
     $error = '';
+    $id = '';
 }
 //routage
 if ( '/TAP/index.php' == $uri || '/TAP/' == $uri) {
@@ -66,7 +67,7 @@ elseif ( '/TAP/index.php/admin' == $uri ){
     admin_action($login,$error);
 }
 elseif ( '/TAP/index.php/users' == $uri ){
-    users_action($login,$error);
+    users_action($login,$error,$id);
 }
 elseif('/TAP/index.php/logout' == $uri ) {
 // fermeture de la session

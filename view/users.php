@@ -37,9 +37,13 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        L.marker([-22.275800, 166.458000]).addTo(map)
-            .bindPopup('Immatriculation véhicule')
-            .openPopup();
+        <?php foreach( $data as $post ): ?>
+            L.marker([<?php echo $post["latitude"]?>,<?php echo $post["longitude"]?>]).addTo(map)
+                .bindPopup("<?php echo $post["immatriculation"]?>")
+                .openPopup();
+
+        <?php endforeach ?>
+
     </script>
     <div class="log">
         <h1>Véhicule en livraison :</h1>
