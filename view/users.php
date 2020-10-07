@@ -39,8 +39,7 @@
 
         <?php foreach( $data as $post ): ?>
             L.marker([<?php echo $post["latitude"]?>,<?php echo $post["longitude"]?>]).addTo(map)
-                .bindPopup("<?php echo $post["immatriculation"]?>")
-                .openPopup();
+                .bindPopup("<?php echo $post["immatriculation"]?>");
 
         <?php endforeach ?>
 
@@ -50,11 +49,16 @@
         <ul>
             <?php foreach( $posts as $post ): ?>
                 <li>
-                    <?php echo $post['immatriculation']; echo '-->'; echo $post['modele'] ?>
-                    <form method="post" action="/TAP/index.php/users?id_supp=<?php echo $post['immatriculation'];?>"></form>
+                    <?php echo $post['immatriculation']; echo '-->'; echo $post['modele']; echo "<button>positon</button>" ?>
                 </li>
             <?php endforeach ?>
         </ul>
     </div>
+    <script>
+        let position= document.querySelector('#position');
+        position.addEventListener('change', function (evt)){
+            .bindPopup("458321NC") .openPopup();
+        }
+    </script>
 <?php $content = ob_get_clean(); ?>
 <?php include 'layout.php'; ?>
