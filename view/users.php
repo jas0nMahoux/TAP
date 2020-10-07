@@ -5,18 +5,18 @@
           crossorigin=""/>
     <h1 class="log">Tableau de bord</h1>
     <div class="log">
-        <form method="post" action="/TAP/index.php/ajout_commande">
             <h2>Commande en cours :</h2>
             <div>
                 <ul>
-                    <?php foreach( $posts as $com ): ?>
+                    <?php foreach( $com as $com ): ?>
                         <li>
-                            <?php echo $com['id_commande']; echo '-->'; echo $com['En_cours'] ?>
+                            <?php echo "Commande n°  " ; echo $com['id_commande']?>
                             <form method="post" action="/TAP/index.php/users?id_commande=<?php echo $com['id_commande'];?>"></form>
                         </li>
                     <?php endforeach ?>
                 </ul>
             </div>
+        <form method="post" action="/TAP/index.php/ajout_commande">
             <input type="submit" value="Ajouter une commande">
         </form>
         <form method="post" action="/TAP/index.php/Liste_commande">
@@ -42,7 +42,7 @@
             .openPopup();
     </script>
     <div class="log">
-        <h1>List of vehicule</h1>
+        <h1>Véhicule en livraison :</h1>
         <ul>
             <?php foreach( $posts as $post ): ?>
                 <li>

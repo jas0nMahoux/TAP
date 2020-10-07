@@ -61,6 +61,31 @@ function get_all_vehicule()
     return $posts;
 }
 
+function get_vehicul_en_cours()
+{
+    $link = open_database_connection();
+    $resultall = mysqli_query($link,'SELECT vehicule.immatriculation, modele, moteur FROM vehicule,capteur WHERE vehicule.immatriculation= capteur.immatriculation AND moteur =1');
+    $posts = array();
+    while ($row = mysqli_fetch_assoc($resultall)) {
+        $posts[] = $row;
+    }
+    mysqli_free_result( $resultall);
+    close_database_connection($link);
+    return $posts;
+}
+
+function get_commande_en_cours( )
+{
+    $link = open_database_connection();
+    $resultall = mysqli_query($link,'SELECT id_commande,En_cours FROM commande WHERE En_cours = 1');
+    $com = array();
+    while ($row = mysqli_fetch_assoc($resultall)) {
+        $com[] = $row;
+    }
+    mysqli_free_result( $resultall);
+    close_database_connection($link);
+    return $com;
+}
 function get_all_personnel()
 {
     $link = open_database_connection();
@@ -99,18 +124,7 @@ function get_post( $id )
     close_database_connection($link);
     return $post;
 }
-function get_commande( )
-{
-    $link = open_database_connection();
-    $resultall = mysqli_query($link,'SELECT id_commande,En_cours FROM commande');
-    $com = array();
-    while ($row = mysqli_fetch_assoc($resultall)) {
-        $com[] = $row;
-    }
-    mysqli_free_result( $resultall);
-    close_database_connection($link);
-    return $com;
-}
+
 function ajout_commande($detail, $adresse,$nb_client ){
     $link = open_database_connection();
     $query = 'INSERT INTO commande (details, adresse_livraison, num_client) 
