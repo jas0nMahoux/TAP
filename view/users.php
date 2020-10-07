@@ -38,7 +38,7 @@
         }).addTo(map);
 
         L.marker([-22.275800, 166.458000]).addTo(map)
-            .bindPopup()
+            .bindPopup('Immatriculation véhicule')
             .openPopup();
     </script>
     <div class="log">

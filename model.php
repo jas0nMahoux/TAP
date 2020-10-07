@@ -87,22 +87,10 @@ function get_commande_en_cours( )
     return $com;
 }
 
-function get_latitude()
+function get_data()
 {
     $link = open_database_connection();
-    $resultall = mysqli_query($link,'SELECT latitude FROM capteur');
-    $posts = array();
-    while ($row = mysqli_fetch_assoc($resultall)) {
-        $posts[] = $row;
-    }
-    mysqli_free_result( $resultall);
-    close_database_connection($link);
-    return $posts;
-}
-function get_longitude()
-{
-    $link = open_database_connection();
-    $resultall = mysqli_query($link,'SELECT longitude FROM capteur');
+    $resultall = mysqli_query($link,'SELECT longitude,latitude,immatriculation FROM capteur');
     $posts2 = array();
     while ($row = mysqli_fetch_assoc($resultall)) {
         $posts[] = $row;
@@ -111,6 +99,7 @@ function get_longitude()
     close_database_connection($link);
     return $posts2;
 }
+
 function get_all_personnel()
 {
     $link = open_database_connection();

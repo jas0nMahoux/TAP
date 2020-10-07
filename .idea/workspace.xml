@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be10b070-abcd-493d-8d0c-bcf75d1834ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/users.php" afterDir="false" />
@@ -267,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602024314766</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Commande_en_cours">
+      <created>1602031136569</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1602031136569</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,10 +331,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601956735160" />
-    <state x="296" y="0" key="CommitChangelistDialog2" timestamp="1602024313557">
+    <state x="296" y="0" key="CommitChangelistDialog2" timestamp="1602031135506">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="296" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602024313557" />
+    <state x="296" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602031135506" />
     <state x="1023" y="194" key="FileChooserDialogImpl" timestamp="1600741123356">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
