@@ -67,7 +67,7 @@ elseif ( '/TAP/index.php/admin' == $uri ){
     admin_action($login,$error);
 }
 elseif ( '/TAP/index.php/users' == $uri ){
-    users_action($login,$error,$id);
+    users_action($login,$error);
 }
 elseif('/TAP/index.php/logout' == $uri ) {
 // fermeture de la session

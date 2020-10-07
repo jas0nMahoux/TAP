@@ -47,7 +47,7 @@ function ajout_commande_action($login,$error)
     }
     require 'view/ajout_commande.php';
 }
-function users_action($login,$error,$id){
+function users_action($login,$error){
     $posts = get_vehicul_en_cours();
     $com = get_commande_en_cours();
     $data = get_data();
