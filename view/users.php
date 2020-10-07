@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin=""/>
-    <h1 class="log">Tableau de bord</h1>
+    <h1 class="log2">Tableau de bord</h1>
     <div class="alignement">
         <form method="post" action="/TAP/index.php/ajout_commande">
             <h2>Commande</h2>
@@ -14,7 +14,7 @@
         </form>
     </div>
 
-    <div id="map" class="alignement" style="height: 500px; width:500px; position: relative; outline: none;" tabindex="0"></div>
+    <div id="map" class="alignement" style="height: 270px; width:655px; position: relative; outline: none;" tabindex="0"></div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin="">

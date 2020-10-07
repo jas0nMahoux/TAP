@@ -29,8 +29,9 @@
                         }?>
                     </p>
                 </div>
+
                 <div class="header_gauche">
-                    <img src="/TAP/img/LOGO.png"/>
+                    <img src="/TAP/img/LOGO.png" alt="logo" height="90" width="90"/>
                 </div>
             </div>
         </nav>
