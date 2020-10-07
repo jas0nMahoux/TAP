@@ -103,19 +103,6 @@ function get_data()
     return $posts2;
 }
 
-function create_markers($lat,$long,$id){
-    $link = open_database_connection();
-    $id = intval($id);
-    $query = 'SELECT longitude,latitude,immatriculation FROM capteur WHERE immatriculation="'.$id.'"';
-    $result = mysqli_query($link, $query);
-    $post = mysqli_fetch_assoc($result);
-    mysqli_free_result( $result);
-    close_database_connection($link);
-
-    L.marker([$lat,$long]).addTo(map)
-    .bindPopup($id)
-    .openPopup();
-}
 function get_all_personnel()
 {
     $link = open_database_connection();
