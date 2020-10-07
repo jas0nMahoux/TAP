@@ -50,6 +50,8 @@ function ajout_commande_action($login,$error)
 function users_action($login,$error){
     $posts = get_vehicul_en_cours();
     $com = get_commande_en_cours();
+    $data1 = get_latitude();
+    $data2 = get_longitude();
     if($_SESSION['admin'] == True){
         $login="admin";
         admin_action($login,$error);

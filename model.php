@@ -86,6 +86,31 @@ function get_commande_en_cours( )
     close_database_connection($link);
     return $com;
 }
+
+function get_latitude()
+{
+    $link = open_database_connection();
+    $resultall = mysqli_query($link,'SELECT latitude FROM capteur');
+    $posts = array();
+    while ($row = mysqli_fetch_assoc($resultall)) {
+        $posts[] = $row;
+    }
+    mysqli_free_result( $resultall);
+    close_database_connection($link);
+    return $posts;
+}
+function get_longitude()
+{
+    $link = open_database_connection();
+    $resultall = mysqli_query($link,'SELECT longitude FROM capteur');
+    $posts2 = array();
+    while ($row = mysqli_fetch_assoc($resultall)) {
+        $posts[] = $row;
+    }
+    mysqli_free_result( $resultall);
+    close_database_connection($link);
+    return $posts2;
+}
 function get_all_personnel()
 {
     $link = open_database_connection();

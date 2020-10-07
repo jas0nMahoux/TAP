@@ -37,7 +37,7 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        L.marker([-22.275800, 166.458000],{ icon: myIcon }).addTo(map)
+        L.marker([-22.275800, 166.458000]).addTo(map)
             .bindPopup()
             .openPopup();
     </script>
