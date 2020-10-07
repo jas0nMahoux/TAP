@@ -1,6 +1,6 @@
 <?php $title= 'Exemple creation compte PHP: Connexion'; ?>
 <?php ob_start(); ?>
-<div class="log">
+<div class="alignement2">
     <h1>List of vehicule</h1>
     <ul>
         <?php foreach( $posts as $post ): ?>
@@ -12,7 +12,7 @@
     </ul>
     <a href="/TAP/index.php/Register_vehicule"><button>Ajouter un véhicule</button></a>
 </div>
-<div class="log">
+<div class="alignement">
     <h1> Liste d'employé</h1>
     <ul>
         <?php foreach( $posts2 as $post2 ): ?>

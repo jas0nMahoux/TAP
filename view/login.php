@@ -13,7 +13,7 @@
         <input type="submit" value="Annuler" />
     </form>
 </div>
-<footer>
+<footer class="foot_position">
     <p>contactez nous en cas de probléme sur l'adrresse adminTAP@gmail.com</p>
     <a href="/TAP/index.php/information.php">Qui sommes nous ?</a>
 </footer>
